@@ -15,25 +15,19 @@
 <main class="app">
 <header class="top"><div><div class="brand">WORD · MEMORY</div><h1>말씀 한 장</h1></div><div class="pill">개역개정 · 암송 카드</div></header>
 <div class="progress-wrap"><div class="progress" id="progress"></div></div>
-<div class="meta"><span id="counter">1 / 50</span><span id="savedCount">본문 입력 50 / 50</span></div>
+<div class="meta"><span id="counter">1 / 50</span><span>암송 말씀 50선</span></div>
 <button class="card" id="card" type="button" aria-label="카드를 뒤집습니다"><div class="card-inner"><div class="side-label" id="sideLabel">말씀</div><div class="card-text" id="cardText">창세기 1:1</div><div class="hint">카드를 터치하면 반대쪽이 보여요</div></div></button>
 <div class="statusline"><span id="masteryStatus">아직 암기 완료로 표시하지 않았어요</span><button id="toggleMastery">✓ 암기 완료 표시</button></div>
 <div class="controls"><button class="btn" id="prev">← 이전</button><button class="btn primary" id="flip">카드 뒤집기 ↻</button><button class="btn" id="next">다음 →</button></div>
-<div class="secondary"><button class="btn" id="edit">본문 입력 / 수정</button><button class="btn" id="typeTestOpen">직접 입력 암기 테스트</button><button class="btn" id="quizOpen">랜덤 퀴즈 시작</button><button class="btn" id="shuffle">순서 섞기</button><button class="btn" id="resetOrder">원래 순서</button></div>
+<div class="secondary"><button class="btn" id="typeTestOpen">직접 입력 암기 테스트</button><button class="btn" id="quizOpen">랜덤 퀴즈 시작</button><button class="btn" id="shuffle">순서 섞기</button><button class="btn" id="resetOrder">원래 순서</button></div>
 <details class="settings"><summary>암기 설정</summary><div class="settings-body">
 <div class="setting-row"><label for="startSide">처음 보여줄 면</label><select id="startSide"><option value="ref">말씀(장절)</option><option value="verse">구절(본문)</option></select></div>
 <div class="setting-row"><label for="fontSize">글자 크기</label><select id="fontSize"><option value="small">작게</option><option value="medium" selected>보통</option><option value="large">크게</option></select></div>
 <div class="setting-row"><label for="jump">말씀 바로 선택</label><select id="jump"></select></div>
-<p class="note">수정한 본문과 암기 완료 상태는 이 기기에 보관됩니다. 데이터를 백업하거나 이전으로 되돌릴 수 있어요.</p><button class="small-link" id="export">입력 내용 백업하기</button><button class="small-link" id="importBtn">백업 불러오기</button><input type="file" id="importFile" accept="application/json,.json" hidden>
+<p class="note">암기 완료 상태와 학습 기록은 이 기기에 보관됩니다. 데이터를 백업하거나 이전으로 되돌릴 수 있어요.</p><button class="small-link" id="export">학습 내용 백업하기</button><button class="small-link" id="importBtn">백업 불러오기</button><input type="file" id="importFile" accept="application/json,.json" hidden>
 </div></details>
 <footer>천천히 읽고, 기억하고, 마음에 새겨 보세요.</footer>
 </main>
-
-<div class="overlay" id="editOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal">
-<div class="modal-head"><div><h2 id="modalTitle">본문 입력 / 수정</h2><div id="modalRef" class="pill"></div></div><button class="close" id="closeEdit" aria-label="닫기">×</button></div>
-<p>성경 본문을 수정하거나 확인해 주세요. 저장하면 기기 내 저장소에 보관됩니다.</p><textarea id="verseInput" placeholder="여기에 성경 본문을 입력하세요."></textarea>
-<div class="modal-actions"><button class="btn" id="clearText">본문 지우기</button><button class="btn primary" id="saveText">저장하기</button></div>
-</div></div>
 
 <div class="overlay" id="typeTestOverlay" role="dialog" aria-modal="true" aria-labelledby="typeTestTitle"><div class="modal">
 <div class="modal-head"><div><h2 id="typeTestTitle">직접 입력 암기 테스트</h2><div class="pill" id="typeTestRef"></div></div><button class="close" id="closeTypeTest" aria-label="닫기">×</button></div>
@@ -56,7 +50,7 @@ const refs=[
 "창세기 1:1","출애굽기 19:5-6","레위기 19:2","레위기 19:18","민수기 6:24-26","신명기 6:4-9","여호수아 1:8","사사기 8:23","사무엘하 7:16","열왕기상 18:21","열왕기하 22:13","역대하 31:20","욥기 1:21","시편 1:1-2","시편 119:105","잠언 1:7","전도서 12:13","아가 8:6","이사야 2:3","예레미야 31:33","요엘 2:28-29","요나 4:2 하반절","미가 3:12","하박국 2:4","말라기 4:4-6","마태복음 4:17","마태복음 28:19-20","마가복음 10:45","누가복음 4:18-19","누가복음 15:7","요한복음 3:16-17","요한복음 20:31","사도행전 1:8","로마서 1:17","로마서 8:26","고린도전서 6:19-20","고린도후서 13:13","갈라디아서 2:20","에베소서 4:11-12","빌립보서 2:6-7","골로새서 3:1","데살로니가전서 5:16-18","디모데전서 2:1-2","빌레몬서 1:16","히브리서 11:1-2","야고보서 2:26","베드로전서 4:16","요한일서 4:10","요한이서 1:7","요한계시록 22:12-13"
 ];
 
-const defaultTexts = {
+const texts = {
   0: "태초에 하나님이 천지를 창조하시니라",
   1: "5 세계가 다 내게 속하였나니 너희가 내 말을 잘 듣고 내 언약을 지키면 너희는 모든 민족 중에서 내 소유가 되겠고\n6 너희가 내게 대하여 제사장 나라가 되며 거룩한 백성이 되리라 너는 이 말을 이스라엘 자손에게 전할지니라",
   2: "너는 이스라엘 자손의 온 회중에게 말하여 이르라 너희는 거룩하라 이는 나 여호와 너희 하나님이 거룩함이니라",
@@ -110,34 +104,30 @@ const defaultTexts = {
 };
 
 const STORAGE_KEY="word-memory-verses-v2";
-let saved={texts:{},mastered:[]};
+let saved={mastered:[]};
 try{
   const raw=JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}");
-  saved.texts=raw.texts||{};
   saved.mastered=Array.isArray(raw.mastered)?raw.mastered:[];
 }catch(e){}
 
-let texts = Object.assign({}, defaultTexts, saved.texts);
 let mastered = new Set(saved.mastered);
-let order = refs.map((_,i)=>i), pos=0, showingVerse=false, editIndex=0;
+let order = refs.map((_,i)=>i), pos=0, showingVerse=false;
 
 const $=id=>document.getElementById(id),card=$("card"),cardText=$("cardText"),sideLabel=$("sideLabel");
 function currentIndex(){return order[pos]}
-function persist(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify({texts,mastered:[...mastered]}))}catch(e){alert("저장 공간에 접근할 수 없어요. 브라우저 설정을 확인해 주세요.")}}
-function render(){const idx=currentIndex(),verse=(texts[idx]||"").trim(),side=showingVerse?"verse":"ref";sideLabel.textContent=side==="ref"?"말씀":"구절";cardText.textContent=side==="ref"?refs[idx]:(verse||"본문을 입력해 주세요");const oldDone=$("cardDone");if(oldDone)oldDone.remove();if(mastered.has(idx)){const done=document.createElement("div");done.id="cardDone";done.className="badge-done card-done";done.textContent="✓ 암기 완료";card.appendChild(done);card.classList.add("is-mastered")}else{card.classList.remove("is-mastered")}cardText.className="card-text"+(side==="ref"?" ref":"");$("counter").textContent=`${pos+1} / ${refs.length}`;$("progress").style.width=`${((pos+1)/refs.length)*100}%`;$("savedCount").textContent=`본문 입력 ${Object.values(texts).filter(v=>String(v).trim()).length} / 50`;$("prev").disabled=pos===0;$("next").disabled=pos===order.length-1;$("jump").value=String(idx);const done=mastered.has(idx);$("masteryStatus").innerHTML=done?'<span class="badge-done">✓ 암기 완료</span> 이 말씀은 외웠어요':'아직 암기 완료로 표시하지 않았어요';$("toggleMastery").textContent=done?"↶ 완료 표시 취소":"✓ 암기 완료 표시";$("toggleMastery").classList.toggle("done",done)}
+function persist(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify({mastered:[...mastered]}))}catch(e){}}
+function render(){const idx=currentIndex(),verse=(texts[idx]||"").trim(),side=showingVerse?"verse":"ref";sideLabel.textContent=side==="ref"?"말씀":"구절";cardText.textContent=side==="ref"?refs[idx]:(verse||"본문을 불러올 수 없어요");const oldDone=$("cardDone");if(oldDone)oldDone.remove();if(mastered.has(idx)){const done=document.createElement("div");done.id="cardDone";done.className="badge-done card-done";done.textContent="✓ 암기 완료";card.appendChild(done);card.classList.add("is-mastered")}else{card.classList.remove("is-mastered")}cardText.className="card-text"+(side==="ref"?" ref":"");$("counter").textContent=`${pos+1} / ${refs.length}`;$("progress").style.width=`${((pos+1)/refs.length)*100}%`;$("prev").disabled=pos===0;$("next").disabled=pos===order.length-1;$("jump").value=String(idx);const done=mastered.has(idx);$("masteryStatus").innerHTML=done?'<span class="badge-done">✓ 암기 완료</span> 이 말씀은 외웠어요':'아직 암기 완료로 표시하지 않았어요';$("toggleMastery").textContent=done?"↶ 완료 표시 취소":"✓ 암기 완료 표시";$("toggleMastery").classList.toggle("done",done)}
 function flip(){showingVerse=!showingVerse;render()}
 function move(d){pos=Math.max(0,Math.min(order.length-1,pos+d));showingVerse=$("startSide").value==="verse";render()}
-function openEditor(){editIndex=currentIndex();$("modalRef").textContent=refs[editIndex];$("verseInput").value=texts[editIndex]||"";$("editOverlay").classList.add("show");setTimeout(()=>$("verseInput").focus(),80)}
-function closeEditor(){$("editOverlay").classList.remove("show")}
+
 function openTypeTest(){const idx=currentIndex();$("typeTestRef").textContent=refs[idx];$("typeTestInput").value="";$("typeTestResult").hidden=true;$("typeTestExpected").hidden=true;$("typeTestOverlay").classList.add("show");setTimeout(()=>$("typeTestInput").focus(),80)}
 function closeTypeTest(){$("typeTestOverlay").classList.remove("show")}
 function normalizeVerse(v){return String(v||"").normalize("NFC").replace(/[\p{P}\p{S}]/gu,"").replace(/\s+/gu," ").trim()}
 $("typeTestOpen").addEventListener("click",openTypeTest);$("closeTypeTest").addEventListener("click",closeTypeTest);$("typeTestOverlay").addEventListener("click",e=>{if(e.target===$("typeTestOverlay"))closeTypeTest()});
 $("clearTypeTest").addEventListener("click",()=>{$("typeTestInput").value="";$("typeTestResult").hidden=true;$("typeTestExpected").hidden=true;$("typeTestInput").focus()});
-$("checkTypeTest").addEventListener("click",()=>{const idx=currentIndex(),expected=(texts[idx]||"").trim(),typed=$("typeTestInput").value.trim();if(!expected){$("typeTestResult").className="type-test-result wrong";$("typeTestResult").textContent="아직 이 말씀의 본문이 입력되지 않았어요. 먼저 ‘본문 입력 / 수정’에서 본문을 저장해 주세요.";$("typeTestResult").hidden=false;$("typeTestExpected").hidden=true;return}if(!typed){$("typeTestResult").className="type-test-result wrong";$("typeTestResult").textContent="외운 본문을 먼저 입력해 주세요.";$("typeTestResult").hidden=false;$("typeTestExpected").hidden=true;return}const ok=normalizeVerse(typed)===normalizeVerse(expected);$("typeTestResult").className="type-test-result"+(ok?"":" wrong");$("typeTestResult").textContent=ok?"정확해요! 입력한 본문이 저장된 본문과 일치합니다.":"아직 달라요. 아래 저장된 본문을 확인하고 다시 도전해 보세요."; $("typeTestResult").hidden=false;$("typeTestExpected").textContent="저장된 본문: "+expected;$("typeTestExpected").hidden=ok?true:false});
+$("checkTypeTest").addEventListener("click",()=>{const idx=currentIndex(),expected=(texts[idx]||"").trim(),typed=$("typeTestInput").value.trim();if(!typed){$("typeTestResult").className="type-test-result wrong";$("typeTestResult").textContent="외운 본문을 먼저 입력해 주세요.";$("typeTestResult").hidden=false;$("typeTestExpected").hidden=true;return}const ok=normalizeVerse(typed)===normalizeVerse(expected);$("typeTestResult").className="type-test-result"+(ok?"":" wrong");$("typeTestResult").textContent=ok?"정확해요! 입력한 본문이 저장된 본문과 일치합니다.":"아직 달라요. 아래 저장된 본문을 확인하고 다시 도전해 보세요."; $("typeTestResult").hidden=false;$("typeTestExpected").textContent="저장된 본문: "+expected;$("typeTestExpected").hidden=ok?true:false});
 
-card.addEventListener("click",flip);$("flip").addEventListener("click",flip);$("prev").addEventListener("click",()=>move(-1));$("next").addEventListener("click",()=>move(1));$("edit").addEventListener("click",openEditor);$("closeEdit").addEventListener("click",closeEditor);$("editOverlay").addEventListener("click",e=>{if(e.target===$("editOverlay"))closeEditor()});
-$("saveText").addEventListener("click",()=>{texts[editIndex]=$("verseInput").value.trim();persist();closeEditor();render()});$("clearText").addEventListener("click",()=>{$("verseInput").value=""});
+card.addEventListener("click",flip);$("flip").addEventListener("click",flip);$("prev").addEventListener("click",()=>move(-1));$("next").addEventListener("click",()=>move(1));
 $("toggleMastery").addEventListener("click",()=>{const idx=currentIndex();mastered.has(idx)?mastered.delete(idx):mastered.add(idx);persist();render()});
 $("shuffle").addEventListener("click",()=>{for(let i=order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[order[i],order[j]]=[order[j],order[i]]}pos=0;showingVerse=$("startSide").value==="verse";render()});
 $("resetOrder").addEventListener("click",()=>{order=refs.map((_,i)=>i);pos=0;showingVerse=$("startSide").value==="verse";render()});
@@ -145,20 +135,19 @@ $("startSide").addEventListener("change",()=>{showingVerse=$("startSide").value=
 $("fontSize").addEventListener("change",e=>{cardText.style.fontSize=e.target.value==="small"?"22px":e.target.value==="large"?"clamp(30px,7vw,42px)":""});
 refs.forEach((r,i)=>{const o=document.createElement("option");o.value=String(i);o.textContent=`${String(i+1).padStart(2,"0")}. ${r}`;$("jump").appendChild(o)});
 $("jump").addEventListener("change",e=>{const idx=Number(e.target.value);pos=order.indexOf(idx);if(pos<0){order.push(idx);pos=order.length-1}showingVerse=$("startSide").value==="verse";render()});
-$("export").addEventListener("click",()=>{const data={app:"말씀 한 장",version:2,verses:refs.map((ref,i)=>({ref,text:texts[i]||"",mastered:mastered.has(i)}))};const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="말씀-암기-백업.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
-$("importBtn").addEventListener("click",()=>$("importFile").click());$("importFile").addEventListener("change",async e=>{const f=e.target.files[0];if(!f)return;try{const data=JSON.parse(await f.text());if(!Array.isArray(data.verses))throw Error();const byRef={};data.verses.forEach(v=>{if(v&&v.ref)byRef[v.ref]=v});refs.forEach((r,i)=>{if(byRef[r]){texts[i]=byRef[r].text||"";if(byRef[r].mastered)mastered.add(i);else mastered.delete(i)}});persist();render();alert("백업을 불러왔어요.")}catch(err){alert("백업 파일을 읽지 못했어요. 올바른 JSON 백업인지 확인해 주세요.")}e.target.value=""});
+$("export").addEventListener("click",()=>{const data={app:"말씀 한 장",version:2,mastered:[...mastered]};const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="말씀-암기-학습기록.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
+$("importBtn").addEventListener("click",()=>$("importFile").click());$("importFile").addEventListener("change",async e=>{const f=e.target.files[0];if(!f)return;try{const data=JSON.parse(await f.text());if(Array.isArray(data.mastered)){mastered=new Set(data.mastered);persist();render();alert("학습 기록을 불러왔어요.")}else{throw Error()}}catch(err){alert("백업 파일을 읽지 못했어요.")}e.target.value=""});
 
 let quizItems=[],quizPos=0,quizScore=0,quizAnswered=false;
 function closeQuiz(){$("quizOverlay").classList.remove("show")}
-function makeQuiz(){const available=refs.map((r,i)=>({ref:r,text:(texts[i]||"").trim(),i}));const withText=available.filter(x=>x.text);if(withText.length<2){alert("랜덤 퀴즈를 시작하려면 먼저 성경 본문을 최소 2개 입력해 주세요.");return}
-const pool=[...withText].sort(()=>Math.random()-.5);quizItems=pool.slice(0,Math.min(10,pool.length)).map((item)=>{const askRef=Math.random()<.5;const distractors=withText.filter(x=>x.i!==item.i).sort(()=>Math.random()-.5).slice(0,3);let options;if(askRef){options=[{label:item.ref,correct:true},...distractors.map(x=>({label:x.ref,correct:false}))]}else{options=[{label:item.text,correct:true},...distractors.map(x=>({label:x.text,correct:false}))]}options.sort(()=>Math.random()-.5);return{item,askRef,options}});quizPos=0;quizScore=0;quizAnswered=false;$("quizOverlay").classList.add("show");renderQuiz()}
+function makeQuiz(){const available=refs.map((r,i)=>({ref:r,text:(texts[i]||"").trim(),i}));const pool=[...available].sort(()=>Math.random()-.5);quizItems=pool.slice(0,Math.min(10,pool.length)).map((item)=>{const askRef=Math.random()<.5;const distractors=available.filter(x=>x.i!==item.i).sort(()=>Math.random()-.5).slice(0,3);let options;if(askRef){options=[{label:item.ref,correct:true},...distractors.map(x=>({label:x.ref,correct:false}))]}else{options=[{label:item.text,correct:true},...distractors.map(x=>({label:x.text,correct:false})).slice(0,3)]}options.sort(()=>Math.random()-.5);return{item,askRef,options}});quizPos=0;quizScore=0;quizAnswered=false;$("quizOverlay").classList.add("show");renderQuiz()}
 function renderQuiz(){const q=quizItems[quizPos];if(!q){$("quizTitle").textContent="퀴즈 완료!";$("quizCounter").textContent=`점수 ${quizScore} / ${quizItems.length}`;$("quizInstructions").textContent="수고했어요! 다시 도전해서 기억을 확인해 보세요.";$("quizQuestion").textContent=`${quizItems.length}문제 중 ${quizScore}문제를 맞혔어요.`;$("quizOptions").innerHTML="";$("quizFeedback").hidden=true;$("quizSkip").textContent="닫기";$("quizNext").textContent="다시 퀴즈";$("quizNext").disabled=false;return}
 quizAnswered=false;$("quizTitle").textContent="랜덤 암기 퀴즈";$("quizCounter").textContent=`${quizPos+1} / ${quizItems.length}`;$("quizInstructions").textContent=q.askRef?"본문을 읽고 알맞은 성경 장절을 고르세요.":"성경 장절을 보고 알맞은 본문을 고르세요.";$("quizQuestion").textContent=q.askRef?q.item.text:q.item.ref;$("quizOptions").innerHTML="";q.options.forEach((opt,n)=>{const b=document.createElement("button");b.className="quiz-option";b.textContent=opt.label;b.addEventListener("click",()=>answerQuiz(n));$("quizOptions").appendChild(b)});$("quizFeedback").hidden=true;$("quizNext").disabled=true;$("quizNext").textContent=quizPos===quizItems.length-1?"결과 보기":"다음 문제 →";$("quizSkip").textContent="모르겠어요"}
 function answerQuiz(n){if(quizAnswered)return;quizAnswered=true;const q=quizItems[quizPos],chosen=q.options[n];if(chosen.correct)quizScore++;[...$("quizOptions").children].forEach((b,i)=>{b.disabled=true;if(q.options[i].correct)b.classList.add("selected")});$("quizFeedback").hidden=false;$("quizFeedback").textContent=chosen.correct?"정답이에요! 잘 기억하고 있네요.":`아쉬워요. 정답은 ${q.askRef?q.item.ref:q.item.text} 입니다.`;$("quizNext").disabled=false}
 $("quizOpen").addEventListener("click",makeQuiz);$("closeQuiz").addEventListener("click",closeQuiz);$("quizOverlay").addEventListener("click",e=>{if(e.target===$("quizOverlay"))closeQuiz()});
 $("quizSkip").addEventListener("click",()=>{if(quizPos>=quizItems.length){closeQuiz();return}if(!quizAnswered){const q=quizItems[quizPos];$("quizFeedback").hidden=false;$("quizFeedback").textContent=`정답: ${q.askRef?q.item.text:q.item.ref}`;$("quizNext").disabled=false;quizAnswered=true}else{quizPos++;renderQuiz()}});
 $("quizNext").addEventListener("click",()=>{if(quizPos>=quizItems.length){makeQuiz();return}if(!quizAnswered)return;if(quizPos===quizItems.length-1){quizPos++;renderQuiz()}else{quizPos++;renderQuiz()}});
-document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeEditor();closeQuiz();closeTypeTest()}if($("editOverlay").classList.contains("show")||$("quizOverlay").classList.contains("show")||$("typeTestOverlay").classList.contains("show"))return;if(e.key==="ArrowLeft")move(-1);if(e.key==="ArrowRight")move(1);if(e.key===" "){e.preventDefault();flip()}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeQuiz();closeTypeTest()}if($("quizOverlay").classList.contains("show")||$("typeTestOverlay").classList.contains("show"))return;if(e.key==="ArrowLeft")move(-1);if(e.key==="ArrowRight")move(1);if(e.key===" "){e.preventDefault();flip()}});
 render();
 </script>
 </body></html>
