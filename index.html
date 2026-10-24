@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f5f1e8">
+<title>말씀 한 장 — 성경 암기</title>
+<style>
+:root{--bg:#f5f1e8;--paper:#fffdf8;--ink:#282b27;--muted:#77796f;--line:#e4dfd3;--accent:#516b55;--accent2:#dce6d8;--shadow:0 14px 40px rgba(48,50,40,.09)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;min-height:100dvh}button,input,textarea{font:inherit}button{cursor:pointer}.app{max-width:760px;margin:0 auto;padding:22px 18px calc(30px + env(safe-area-inset-bottom))}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}.brand{font-size:13px;letter-spacing:.12em;color:var(--accent);font-weight:800}h1{font-size:25px;line-height:1.25;margin:5px 0 0;letter-spacing:-.04em}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:12px;color:var(--muted);background:rgba(255,253,248,.65)}.progress-wrap{height:5px;background:#e7e1d6;border-radius:20px;overflow:hidden;margin:0 0 10px}.progress{height:100%;width:0;background:var(--accent);transition:width .2s}.meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);margin-bottom:18px}.card{position:relative;width:100%;min-height:340px;border:1px solid var(--line);border-radius:28px;background:var(--paper);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;text-align:center;padding:34px 24px;overflow:hidden;transition:background .2s}.card:focus-visible{outline:3px solid #8ba68b;outline-offset:3px}.card::before{content:"";position:absolute;width:180px;height:180px;border:1px solid #eeeadf;border-radius:50%;top:-95px;right:-75px}.card::after{content:"";position:absolute;width:130px;height:130px;border:1px solid #eeeadf;border-radius:50%;bottom:-80px;left:-45px}.card-inner{position:relative;z-index:1;width:100%}.side-label{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--accent);margin-bottom:20px}.card-text{font-size:clamp(23px,5.5vw,34px);font-weight:650;line-height:1.65;letter-spacing:-.04em;white-space:pre-wrap;overflow-wrap:anywhere}.card-text.ref{font-size:clamp(27px,6vw,38px);letter-spacing:-.045em}.hint{font-size:12px;color:#96968b;margin-top:24px}.controls{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:10px;margin:17px 0 12px}.btn{border:1px solid var(--line);border-radius:15px;padding:13px 10px;background:var(--paper);color:var(--ink);font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:white}.btn:active{transform:scale(.985)}.btn:disabled{opacity:.35;cursor:not-allowed}.secondary{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}.secondary .btn{flex:1;min-width:125px;font-size:13px;padding:11px}.statusline{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;background:#e8ede3;border:1px solid #d8e1d2;border-radius:14px;padding:11px 13px;margin-top:12px;font-size:13px}.statusline button{border:0;background:transparent;color:var(--accent);font-weight:800;padding:4px}.statusline .done{color:#2e653c}.settings{background:rgba(255,253,248,.72);border:1px solid var(--line);border-radius:18px;padding:14px 15px;margin-top:18px}.settings summary{font-weight:750;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}.settings summary::after{content:"＋";color:var(--accent)}.settings[open] summary::after{content:"−"}.settings-body{padding-top:15px}.setting-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 0;font-size:14px}select{border:1px solid var(--line);background:white;border-radius:10px;padding:9px;max-width:58%}.note{font-size:12px;line-height:1.65;color:var(--muted);margin:12px 0 0}footer{text-align:center;font-size:11px;color:#929287;margin-top:22px}.overlay{position:fixed;inset:0;background:rgba(25,28,24,.48);display:none;align-items:flex-end;justify-content:center;padding:12px;z-index:5}.overlay.show{display:flex}.modal{width:min(100%,620px);max-height:90dvh;overflow:auto;background:var(--paper);border-radius:24px;padding:22px;box-shadow:0 20px 70px #0002}.modal-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.modal h2{font-size:20px;margin:0 0 6px}.close{border:0;background:#eeeae0;border-radius:50%;width:36px;height:36px;font-size:20px}.modal p{font-size:13px;color:var(--muted);line-height:1.6}textarea{width:100%;min-height:170px;resize:vertical;border:1px solid var(--line);border-radius:14px;padding:13px;background:white;line-height:1.7;outline-color:var(--accent)}.modal-actions{display:flex;gap:9px;margin-top:12px}.modal-actions .btn{flex:1}.small-link{border:0;background:transparent;color:var(--accent);text-decoration:underline;font-size:13px;padding:10px 0}.quiz-question{font-size:22px;font-weight:750;line-height:1.55;margin:20px 0}.quiz-options{display:grid;gap:9px}.quiz-option{border:1px solid var(--line);background:#fff;border-radius:13px;padding:13px 14px;text-align:left;line-height:1.5}.quiz-option.selected{border-color:var(--accent);background:#edf2e9}.quiz-feedback{padding:13px;border-radius:12px;margin-top:12px;font-size:14px;line-height:1.6;background:#f0eee7}.quiz-actions{display:flex;gap:9px;margin-top:14px}.quiz-actions .btn{flex:1}.badge-done{display:inline-flex;align-items:center;gap:5px;color:#2e653c;background:#e3eddf;padding:5px 9px;border-radius:99px;font-size:11px;font-weight:800}.card-done{position:absolute;top:14px;right:14px;z-index:2}.type-test-result{margin-top:14px;padding:12px 14px;border-radius:14px;background:#e3eddf;color:#2e653c;font-weight:750}.type-test-result.wrong{background:#f7e7df;color:#8b4430}.type-test-expected{margin-top:10px;padding:12px;border:1px solid var(--line);border-radius:12px;line-height:1.7;white-space:pre-wrap}.card.is-mastered{border:3px solid #3f7550;background:#d7ead8;box-shadow:0 14px 40px rgba(48,90,55,.18),inset 0 0 0 4px rgba(255,255,255,.42)}.card.is-mastered::before,.card.is-mastered::after{border-color:rgba(48,100,60,.22)}.card.is-mastered .side-label{color:#285b36}.card.is-mastered .card-text{color:#204b2c}.card.is-mastered .hint{color:#3f7550}.card.is-mastered .card-done{background:#2f6b42;color:#fff;padding:7px 12px;font-size:12px;box-shadow:0 3px 10px rgba(30,70,40,.16)}
+@media(min-width:600px){.app{padding-top:32px}.card{min-height:390px}.overlay{align-items:center}}
+</style>
+</head>
+<body>
+<main class="app">
+<header class="top"><div><div class="brand">WORD · MEMORY</div><h1>말씀 한 장</h1></div><div class="pill">개역개정 · 암송 카드</div></header>
+<div class="progress-wrap"><div class="progress" id="progress"></div></div>
+<div class="meta"><span id="counter">1 / 50</span><span id="savedCount">본문 입력 50 / 50</span></div>
+<button class="card" id="card" type="button" aria-label="카드를 뒤집습니다"><div class="card-inner"><div class="side-label" id="sideLabel">말씀</div><div class="card-text" id="cardText">창세기 1:1</div><div class="hint">카드를 터치하면 반대쪽이 보여요</div></div></button>
+<div class="statusline"><span id="masteryStatus">아직 암기 완료로 표시하지 않았어요</span><button id="toggleMastery">✓ 암기 완료 표시</button></div>
+<div class="controls"><button class="btn" id="prev">← 이전</button><button class="btn primary" id="flip">카드 뒤집기 ↻</button><button class="btn" id="next">다음 →</button></div>
+<div class="secondary"><button class="btn" id="edit">본문 입력 / 수정</button><button class="btn" id="typeTestOpen">직접 입력 암기 테스트</button><button class="btn" id="quizOpen">랜덤 퀴즈 시작</button><button class="btn" id="shuffle">순서 섞기</button><button class="btn" id="resetOrder">원래 순서</button></div>
+<details class="settings"><summary>암기 설정</summary><div class="settings-body">
+<div class="setting-row"><label for="startSide">처음 보여줄 면</label><select id="startSide"><option value="ref">말씀(장절)</option><option value="verse">구절(본문)</option></select></div>
+<div class="setting-row"><label for="fontSize">글자 크기</label><select id="fontSize"><option value="small">작게</option><option value="medium" selected>보통</option><option value="large">크게</option></select></div>
+<div class="setting-row"><label for="jump">말씀 바로 선택</label><select id="jump"></select></div>
+<p class="note">수정한 본문과 암기 완료 상태는 이 기기에 보관됩니다. 데이터를 백업하거나 이전으로 되돌릴 수 있어요.</p><button class="small-link" id="export">입력 내용 백업하기</button><button class="small-link" id="importBtn">백업 불러오기</button><input type="file" id="importFile" accept="application/json,.json" hidden>
+</div></details>
+<footer>천천히 읽고, 기억하고, 마음에 새겨 보세요.</footer>
+</main>
+
+<div class="overlay" id="editOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal">
+<div class="modal-head"><div><h2 id="modalTitle">본문 입력 / 수정</h2><div id="modalRef" class="pill"></div></div><button class="close" id="closeEdit" aria-label="닫기">×</button></div>
+<p>성경 본문을 수정하거나 확인해 주세요. 저장하면 기기 내 저장소에 보관됩니다.</p><textarea id="verseInput" placeholder="여기에 성경 본문을 입력하세요."></textarea>
+<div class="modal-actions"><button class="btn" id="clearText">본문 지우기</button><button class="btn primary" id="saveText">저장하기</button></div>
+</div></div>
+
+<div class="overlay" id="typeTestOverlay" role="dialog" aria-modal="true" aria-labelledby="typeTestTitle"><div class="modal">
+<div class="modal-head"><div><h2 id="typeTestTitle">직접 입력 암기 테스트</h2><div class="pill" id="typeTestRef"></div></div><button class="close" id="closeTypeTest" aria-label="닫기">×</button></div>
+<p>외운 본문을 직접 입력한 뒤 확인해 보세요. 띄어쓰기는 확인하고, 문장부호 차이는 무시하고 비교합니다.</p>
+<textarea id="typeTestInput" placeholder="외운 성경 본문을 입력하세요."></textarea>
+<div class="modal-actions"><button class="btn" id="clearTypeTest">다시 입력</button><button class="btn primary" id="checkTypeTest">정답 확인</button></div>
+<div id="typeTestResult" class="type-test-result" hidden></div>
+<div id="typeTestExpected" class="type-test-expected" hidden></div>
+</div></div>
+
+<div class="overlay" id="quizOverlay" role="dialog" aria-modal="true" aria-labelledby="quizTitle"><div class="modal">
+<div class="modal-head"><div><h2 id="quizTitle">랜덤 암기 퀴즈</h2><div class="pill" id="quizCounter">1 / 10</div></div><button class="close" id="closeQuiz" aria-label="퀴즈 닫기">×</button></div>
+<p id="quizInstructions">제시된 내용과 짝이 되는 답을 골라 보세요.</p>
+<div class="quiz-question" id="quizQuestion"></div><div class="quiz-options" id="quizOptions"></div><div class="quiz-feedback" id="quizFeedback" hidden></div>
+<div class="quiz-actions"><button class="btn" id="quizSkip">모르겠어요</button><button class="btn primary" id="quizNext" disabled>다음 문제 →</button></div>
+</div></div>
+
+<script>
+const refs=[
+"창세기 1:1","출애굽기 19:5-6","레위기 19:2","레위기 19:18","민수기 6:24-26","신명기 6:4-9","여호수아 1:8","사사기 8:23","사무엘하 7:16","열왕기상 18:21","열왕기하 22:13","역대하 31:20","욥기 1:21","시편 1:1-2","시편 119:105","잠언 1:7","전도서 12:13","아가 8:6","이사야 2:3","예레미야 31:33","요엘 2:28-29","요나 4:2 하반절","미가 3:12","하박국 2:4","말라기 4:4-6","마태복음 4:17","마태복음 28:19-20","마가복음 10:45","누가복음 4:18-19","누가복음 15:7","요한복음 3:16-17","요한복음 20:31","사도행전 1:8","로마서 1:17","로마서 8:26","고린도전서 6:19-20","고린도후서 13:13","갈라디아서 2:20","에베소서 4:11-12","빌립보서 2:6-7","골로새서 3:1","데살로니가전서 5:16-18","디모데전서 2:1-2","빌레몬서 1:16","히브리서 11:1-2","야고보서 2:26","베드로전서 4:16","요한일서 4:10","요한이서 1:7","요한계시록 22:12-13"
+];
+
+const defaultTexts = {
+  0: "태초에 하나님이 천지를 창조하시니라",
+  1: "5 세계가 다 내게 속하였나니 너희가 내 말을 잘 듣고 내 언약을 지키면 너희는 모든 민족 중에서 내 소유가 되겠고\n6 너희가 내게 대하여 제사장 나라가 되며 거룩한 백성이 되리라 너는 이 말을 이스라엘 자손에게 전할지니라",
+  2: "너는 이스라엘 자손의 온 회중에게 말하여 이르라 너희는 거룩하라 이는 나 여호와 너희 하나님이 거룩함이니라",
+  3: "원수를 갚지 말며 동포를 원망하지 말며 네 이웃 사랑하기를 네 자신과 같이 사랑하라 나는 여호와이니라",
+  4: "24 여호와는 네게 복을 주시고 너를 지키시기를 원하며\n25 여호와는 그의 얼굴을 네게 비추사 은혜 베푸시기를 원하며\n26 여호와는 그 얼굴을 네게로 향하여 드사 평강 주시기를 원하노라 할지니라 하라",
+  5: "4 이스라엘아 들으라 우리 하나님 여호와는 오직 유일한 여호와이시니\n5 너는 마음을 다하고 뜻을 다하고 힘을 다하여 네 하나님 여호와를 사랑하라\n6 오늘 내가 네게 명하는 이 말씀을 너는 마음에 새기고\n7 네 자녀에게 부지런히 가르치며 집에 앉았을 때에든지 길을 갈 때에든지 누워 있을 때에든지 일어날 때에든지 이 말씀을 강론할 것이며\n8 너는 또 그것을 네 손목에 매어 기호를 삼으며 네 미간에 붙여 표로 삼고\n9 또 네 집 문설주와 바깥 문에 기록할지니라",
+  6: "이 율법책을 네 입에서 떠나지 말게 하며 주야로 그것을 묵상하여 그 안에 기록된 대로 다 지켜 행하라 그리하면 네 길이 평탄하게 될 것이며 네가 형통하리라",
+  7: "기드온이 그들에게 이르되 내가 너희를 다스리지 아니하겠고 나의 아들도 너희를 다스리지 아니할 것이요 여호와께서 너희를 다스리시리라 하니라",
+  8: "네 집과 네 나라가 내 앞에서 영원히 보전되고 네 왕위가 영원히 견고하리라 하셨다 하라",
+  9: "엘리야가 모든 백성에게 가까이 나아가 이르되 너희가 어느 때까지 둘 사이에서 머뭇머뭇 하려느냐 여호와가 만일 하나님이면 그를 따르고 바알이 만일 하나님이면 그를 따를지니라 하니 백성이 말 한마디도 대답하지 아니하는지라",
+  10: "너희는 가서 나와 백성과 온 유다를 위하여 이 발견한 책의 말씀에 대하여 여호와께 물으라 우리 조상들이 이 책의 말씀을 듣지 아니하며 이 책에 우리를 위하여 기록된 모든 것을 행하지 아니하였으므로 여호와께서 우리에게 내리신 진노가 크도다",
+  11: "히스기야가 온 유다에 이같이 행하되 그의 하나님 여호와 보시기에 선과 정의와 진실함으로 행하였으니",
+  12: "이르되 내가 모태에서 알몸으로 나왔사온즉 또한 알몸이 그리로 돌아가올지라 주신 이도 여호와시요 거두신 이도 여호와시오니 여호와의 이름이 찬송을 받으실지니이다 하고",
+  13: "1 복 있는 사람은 악인들의 꾀를 따르지 아니하며 죄인들의 길에 서지 아니하며 오만한 자들의 자리에 앉지 아니하고\n2 오직 여호와의 율법을 즐거워하여 그의 율법을 주야로 묵상하는도다",
+  14: "주의 말씀은 내 발에 등이요 내 길에 빛이니이다",
+  15: "여호와를 경외하는 것이 지식의 근본이거늘 미련한 자는 지혜와 훈계를 멸시하느니라",
+  16: "일의 결국을 다 들었으니 하나님을 경외하고 그의 명령들을 지킬지어다 이것이 모든 사람의 본분이니라",
+  17: "너는 나를 도장 같이 마음에 품고 도장 같이 팔에 두라 사랑은 죽음 같이 강하고 질투는 스올 같이 잔인하며 불길 같이 일어나니 그 기세가 여호와의 불과 같으니라",
+  18: "많은 백성이 가며 이르기를 오라 우리가 여호와의 산에 오르며 야곱의 하나님의 전에 이르자 그가 그의 길을 우리에게 가르치실 것이라 우리가 그 길로 행하리라 하리니 이는 율법이 시온에서부터 나올 것이요 여호와의 말씀이 예루살렘에서부터 나올 것임이니라",
+  19: "그러나 그 날 후에 내가 이스라엘 집과 맺을 언약은 이러하니 곧 내가 나의 법을 그들의 속에 두며 그들의 마음에 기록하여 나는 그들의 하나님이 되고 그들은 내 백성이 될 것이라 여호와의 말씀이니라",
+  20: "28 그 후에 내가 내 영을 만민에게 부어 주리니 너희 자녀들이 장래 일을 말할 것이며 너희 늙은이는 꿈을 꾸며 너희 젊은이는 이상을 볼 것이며\n29 그 때에 내가 또 내 영을 남종과 여종에게 부어 줄 것이며",
+  21: "주께서는 은혜로우시며 자비로우시며 노하기를 더디하시며 인애가 크시사 뜻을 돌이켜 재앙을 내리지 아니하시는 하나님이신 줄을 내가 알았음이니이다",
+  22: "이러므로 너희로 말미암아 시온은 갈아엎은 밭이 되고 예루살렘은 무더기가 되고 성전의 산은 수풀의 높은 곳이 되리라",
+  23: "보라 그의 마음은 교만하며 그 속에서 정직하지 못하나 의인은 그의 믿음으로 말미암아 살리라",
+  24: "4 너희는 내가 호렙에서 온 이스라엘을 위하여 내 종 모세에게 명령한 법 곧 율례와 법도를 기억하라\n5 보라 여호와의 크고 두려운 날이 이르기 전에 내가 선지자 엘리야를 너희에게 보내리니\n6 그가 아버지의 마음을 자녀에게로 돌이키게 하고 자녀들의 마음을 그들의 아버지에게로 돌이키게 하리라 돌이키지 아니하면 두렵건대 내가 와서 저주로 그 땅을 칠까 하노라 하시니라",
+  25: "이 때부터 예수께서 비로소 전파하여 이르시되 회개하라 천국이 가까이 왔느니라 하시더라",
+  26: "19 그러므로 너희는 가서 모든 민족을 제자로 삼아 아버지와 아들과 성령의 이름으로 세례를 베풀고\n20 내가 너희에게 분부한 모든 것을 가르쳐 지키게 하라 볼지어다 내가 세상 끝날까지 너희와 항상 함께 있으리라 하시니라",
+  27: "인자가 온 것은 섬김을 받으려 함이 아니라 도리어 섬기려 하고 자기 목숨을 많은 사람의 대속물로 주려 함이니라",
+  28: "18 주의 성령이 내게 임하셨으니 이는 가난한 자에게 복음을 전하게 하시려고 내게 기름을 부으시고 나를 보내사 포로 된 자에게 자유를, 눈 먼 자에게 다시 보게 함을 전파하며 눌린 자를 자유롭게 하고\n19 주의 은혜의 해를 전파하게 하려 하심이라 하였더라",
+  29: "내가 너희에게 이르노니 이와 같이 죄인 한 사람이 회개하면 하늘에서는 회개할 것 없는 의인 아흔아홉으로 말미암아 기뻐하는 것보다 더하리라",
+  30: "16 하나님이 세상을 이처럼 사랑하사 독생자를 주셨으니 이는 그를 믿는 자마다 멸망하지 않고 영생을 얻게 하려 하심이라\n17 하나님이 그 아들을 세상에 보내신 것은 세상을 심판하려 하심이 아니요 그로 말미암아 세상이 구원을 받게 하려 하심이라",
+  31: "오직 이것을 기록함은 너희로 예수께서 하나님의 아들 그리스도이심을 믿게 하려 함이요 또 너희로 믿고 그 이름을 힘입어 생명을 얻게 하려 함이니라",
+  32: "오직 성령이 너희에게 임하시면 너희가 권능을 받고 예루살렘과 온 유대와 사마리아와 땅 끝까지 이르러 내 증인이 되리라 하시니라",
+  33: "복음에는 하나님의 의가 나타나서 믿음으로 믿음에 이르게 하나니 기록된 바 오직 의인은 믿음으로 말미암아 살리라 함과 같으니라",
+  34: "이와 같이 성령도 우리의 연약함을 도우시나니 우리는 마땅히 기도할 바를 알지 못하나 오직 성령이 말할 수 없는 탄식으로 우리를 위하여 친히 간구하시느니라",
+  35: "19 너희 몸은 너희가 하나님께로부터 받은 바 너희 가운데 계신 성령의 전인 줄을 알지 못하느냐 너희는 너희 자신의 것이 아니라\n20 값으로 산 것이 되었으니 그런즉 너희 몸으로 하나님께 영광을 돌리라",
+  36: "주 예수 그리스도의 은혜와 하나님의 사랑과 성령의 교통하심이 너희 무리와 함께 있을지어다",
+  37: "내가 그리스도와 함께 십자가에 못 박혔나니 그런즉 이제는 내가 사는 것이 아니요 오직 내 안에 그리스도께서 사시는 것이라 이제 내가 육체 가운데 사는 것은 나를 사랑하사 나를 위하여 자기 자신을 버리신 하나님의 아들을 믿는 믿음 안에서 사는 것이라",
+  38: "11 그가 어떤 사람은 사도로, 어떤 사람은 선지자로, 어떤 사람은 복음 전하는 자로, 어떤 사람은 목사와 교사로 삼으셨으니\n12 이는 성도를 온전하게 하여 봉사의 일을 하게 하며 그리스도의 몸을 세우려 하심이라",
+  39: "6 그는 근본 하나님의 본체시나 하나님과 동등됨을 취할 것으로 여기지 아니하시고\n7 오히려 자기를 비워 종의 형체를 가지사 사람들과 같이 되셨고",
+  40: "그러므로 너희가 그리스도와 함께 다시 살리심을 받았으면 위의 것을 찾으라 거기는 그리스도께서 하나님 우편에 앉아 계시느니라",
+  41: "16 항상 기뻐하라\n17 쉬지 말고 기도하라\n18 범사에 감사하라 이것이 그리스도 예수 안에서 너희를 향하신 하나님의 뜻이니라",
+  42: "1 그러므로 내가 첫째로 권하노니 모든 사람을 위하여 간구와 기도와 도고와 감사를 하되\n2 임금들과 높은 지위에 있는 모든 사람을 위하여 하라 이는 우리가 모든 경건과 단정함으로 고요하고 평안한 생활을 하려 함이라",
+  43: "이 후로는 종과 같이 대하지 아니하고 종 이상으로 곧 사랑 받는 형제로 둘 자라 내게 특별히 그러하거든 하물며 육신과 주 안에서 상관된 네게랴",
+  44: "1 믿음은 바라는 것들의 실상이요 보이지 않는 것들의 증거니\n2 선진들이 이로써 증거를 얻었느니라",
+  45: "영혼 없는 몸이 죽은 것 같이 행함이 없는 믿음은 죽은 것이니라",
+  46: "만일 그리스도인으로 고난을 받으면 부끄러워하지 말고 도리어 그 이름으로 하나님께 영광을 돌리라",
+  47: "사랑은 여기 있으니 우리가 하나님을 사랑한 것이 아니요 하나님이 우리를 사랑하사 우리 죄를 속하기 위하여 화목제물로 그 아들을 보내셨음이라",
+  48: "미혹하는 자가 세상에 많이 나왔나니 이는 예수 그리스도께서 육체로 오심을 부인하는 자라 이런 자가 미혹하는 자요 적그리스도니",
+  49: "12 보라 내가 속히 오리니 내가 줄 상이 내게 있어 각 사람에게 그가 행한 대로 갚아 주리라\n13 나는 알파와 오메가요 처음과 마지막이요 시작과 마침이라"
+};
+
+const STORAGE_KEY="word-memory-verses-v2";
+let saved={texts:{},mastered:[]};
+try{
+  const raw=JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}");
+  saved.texts=raw.texts||{};
+  saved.mastered=Array.isArray(raw.mastered)?raw.mastered:[];
+}catch(e){}
+
+let texts = Object.assign({}, defaultTexts, saved.texts);
+let mastered = new Set(saved.mastered);
+let order = refs.map((_,i)=>i), pos=0, showingVerse=false, editIndex=0;
+
+const $=id=>document.getElementById(id),card=$("card"),cardText=$("cardText"),sideLabel=$("sideLabel");
+function currentIndex(){return order[pos]}
+function persist(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify({texts,mastered:[...mastered]}))}catch(e){alert("저장 공간에 접근할 수 없어요. 브라우저 설정을 확인해 주세요.")}}
+function render(){const idx=currentIndex(),verse=(texts[idx]||"").trim(),side=showingVerse?"verse":"ref";sideLabel.textContent=side==="ref"?"말씀":"구절";cardText.textContent=side==="ref"?refs[idx]:(verse||"본문을 입력해 주세요");const oldDone=$("cardDone");if(oldDone)oldDone.remove();if(mastered.has(idx)){const done=document.createElement("div");done.id="cardDone";done.className="badge-done card-done";done.textContent="✓ 암기 완료";card.appendChild(done);card.classList.add("is-mastered")}else{card.classList.remove("is-mastered")}cardText.className="card-text"+(side==="ref"?" ref":"");$("counter").textContent=`${pos+1} / ${refs.length}`;$("progress").style.width=`${((pos+1)/refs.length)*100}%`;$("savedCount").textContent=`본문 입력 ${Object.values(texts).filter(v=>String(v).trim()).length} / 50`;$("prev").disabled=pos===0;$("next").disabled=pos===order.length-1;$("jump").value=String(idx);const done=mastered.has(idx);$("masteryStatus").innerHTML=done?'<span class="badge-done">✓ 암기 완료</span> 이 말씀은 외웠어요':'아직 암기 완료로 표시하지 않았어요';$("toggleMastery").textContent=done?"↶ 완료 표시 취소":"✓ 암기 완료 표시";$("toggleMastery").classList.toggle("done",done)}
+function flip(){showingVerse=!showingVerse;render()}
+function move(d){pos=Math.max(0,Math.min(order.length-1,pos+d));showingVerse=$("startSide").value==="verse";render()}
+function openEditor(){editIndex=currentIndex();$("modalRef").textContent=refs[editIndex];$("verseInput").value=texts[editIndex]||"";$("editOverlay").classList.add("show");setTimeout(()=>$("verseInput").focus(),80)}
+function closeEditor(){$("editOverlay").classList.remove("show")}
+function openTypeTest(){const idx=currentIndex();$("typeTestRef").textContent=refs[idx];$("typeTestInput").value="";$("typeTestResult").hidden=true;$("typeTestExpected").hidden=true;$("typeTestOverlay").classList.add("show");setTimeout(()=>$("typeTestInput").focus(),80)}
+function closeTypeTest(){$("typeTestOverlay").classList.remove("show")}
+function normalizeVerse(v){return String(v||"").normalize("NFC").replace(/[\p{P}\p{S}]/gu,"").replace(/\s+/gu," ").trim()}
+$("typeTestOpen").addEventListener("click",openTypeTest);$("closeTypeTest").addEventListener("click",closeTypeTest);$("typeTestOverlay").addEventListener("click",e=>{if(e.target===$("typeTestOverlay"))closeTypeTest()});
+$("clearTypeTest").addEventListener("click",()=>{$("typeTestInput").value="";$("typeTestResult").hidden=true;$("typeTestExpected").hidden=true;$("typeTestInput").focus()});
+$("checkTypeTest").addEventListener("click",()=>{const idx=currentIndex(),expected=(texts[idx]||"").trim(),typed=$("typeTestInput").value.trim();if(!expected){$("typeTestResult").className="type-test-result wrong";$("typeTestResult").textContent="아직 이 말씀의 본문이 입력되지 않았어요. 먼저 ‘본문 입력 / 수정’에서 본문을 저장해 주세요.";$("typeTestResult").hidden=false;$("typeTestExpected").hidden=true;return}if(!typed){$("typeTestResult").className="type-test-result wrong";$("typeTestResult").textContent="외운 본문을 먼저 입력해 주세요.";$("typeTestResult").hidden=false;$("typeTestExpected").hidden=true;return}const ok=normalizeVerse(typed)===normalizeVerse(expected);$("typeTestResult").className="type-test-result"+(ok?"":" wrong");$("typeTestResult").textContent=ok?"정확해요! 입력한 본문이 저장된 본문과 일치합니다.":"아직 달라요. 아래 저장된 본문을 확인하고 다시 도전해 보세요."; $("typeTestResult").hidden=false;$("typeTestExpected").textContent="저장된 본문: "+expected;$("typeTestExpected").hidden=ok?true:false});
+
+card.addEventListener("click",flip);$("flip").addEventListener("click",flip);$("prev").addEventListener("click",()=>move(-1));$("next").addEventListener("click",()=>move(1));$("edit").addEventListener("click",openEditor);$("closeEdit").addEventListener("click",closeEditor);$("editOverlay").addEventListener("click",e=>{if(e.target===$("editOverlay"))closeEditor()});
+$("saveText").addEventListener("click",()=>{texts[editIndex]=$("verseInput").value.trim();persist();closeEditor();render()});$("clearText").addEventListener("click",()=>{$("verseInput").value=""});
+$("toggleMastery").addEventListener("click",()=>{const idx=currentIndex();mastered.has(idx)?mastered.delete(idx):mastered.add(idx);persist();render()});
+$("shuffle").addEventListener("click",()=>{for(let i=order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[order[i],order[j]]=[order[j],order[i]]}pos=0;showingVerse=$("startSide").value==="verse";render()});
+$("resetOrder").addEventListener("click",()=>{order=refs.map((_,i)=>i);pos=0;showingVerse=$("startSide").value==="verse";render()});
+$("startSide").addEventListener("change",()=>{showingVerse=$("startSide").value==="verse";render()});
+$("fontSize").addEventListener("change",e=>{cardText.style.fontSize=e.target.value==="small"?"22px":e.target.value==="large"?"clamp(30px,7vw,42px)":""});
+refs.forEach((r,i)=>{const o=document.createElement("option");o.value=String(i);o.textContent=`${String(i+1).padStart(2,"0")}. ${r}`;$("jump").appendChild(o)});
+$("jump").addEventListener("change",e=>{const idx=Number(e.target.value);pos=order.indexOf(idx);if(pos<0){order.push(idx);pos=order.length-1}showingVerse=$("startSide").value==="verse";render()});
+$("export").addEventListener("click",()=>{const data={app:"말씀 한 장",version:2,verses:refs.map((ref,i)=>({ref,text:texts[i]||"",mastered:mastered.has(i)}))};const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="말씀-암기-백업.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
+$("importBtn").addEventListener("click",()=>$("importFile").click());$("importFile").addEventListener("change",async e=>{const f=e.target.files[0];if(!f)return;try{const data=JSON.parse(await f.text());if(!Array.isArray(data.verses))throw Error();const byRef={};data.verses.forEach(v=>{if(v&&v.ref)byRef[v.ref]=v});refs.forEach((r,i)=>{if(byRef[r]){texts[i]=byRef[r].text||"";if(byRef[r].mastered)mastered.add(i);else mastered.delete(i)}});persist();render();alert("백업을 불러왔어요.")}catch(err){alert("백업 파일을 읽지 못했어요. 올바른 JSON 백업인지 확인해 주세요.")}e.target.value=""});
+
+let quizItems=[],quizPos=0,quizScore=0,quizAnswered=false;
+function closeQuiz(){$("quizOverlay").classList.remove("show")}
+function makeQuiz(){const available=refs.map((r,i)=>({ref:r,text:(texts[i]||"").trim(),i}));const withText=available.filter(x=>x.text);if(withText.length<2){alert("랜덤 퀴즈를 시작하려면 먼저 성경 본문을 최소 2개 입력해 주세요.");return}
+const pool=[...withText].sort(()=>Math.random()-.5);quizItems=pool.slice(0,Math.min(10,pool.length)).map((item)=>{const askRef=Math.random()<.5;const distractors=withText.filter(x=>x.i!==item.i).sort(()=>Math.random()-.5).slice(0,3);let options;if(askRef){options=[{label:item.ref,correct:true},...distractors.map(x=>({label:x.ref,correct:false}))]}else{options=[{label:item.text,correct:true},...distractors.map(x=>({label:x.text,correct:false}))]}options.sort(()=>Math.random()-.5);return{item,askRef,options}});quizPos=0;quizScore=0;quizAnswered=false;$("quizOverlay").classList.add("show");renderQuiz()}
+function renderQuiz(){const q=quizItems[quizPos];if(!q){$("quizTitle").textContent="퀴즈 완료!";$("quizCounter").textContent=`점수 ${quizScore} / ${quizItems.length}`;$("quizInstructions").textContent="수고했어요! 다시 도전해서 기억을 확인해 보세요.";$("quizQuestion").textContent=`${quizItems.length}문제 중 ${quizScore}문제를 맞혔어요.`;$("quizOptions").innerHTML="";$("quizFeedback").hidden=true;$("quizSkip").textContent="닫기";$("quizNext").textContent="다시 퀴즈";$("quizNext").disabled=false;return}
+quizAnswered=false;$("quizTitle").textContent="랜덤 암기 퀴즈";$("quizCounter").textContent=`${quizPos+1} / ${quizItems.length}`;$("quizInstructions").textContent=q.askRef?"본문을 읽고 알맞은 성경 장절을 고르세요.":"성경 장절을 보고 알맞은 본문을 고르세요.";$("quizQuestion").textContent=q.askRef?q.item.text:q.item.ref;$("quizOptions").innerHTML="";q.options.forEach((opt,n)=>{const b=document.createElement("button");b.className="quiz-option";b.textContent=opt.label;b.addEventListener("click",()=>answerQuiz(n));$("quizOptions").appendChild(b)});$("quizFeedback").hidden=true;$("quizNext").disabled=true;$("quizNext").textContent=quizPos===quizItems.length-1?"결과 보기":"다음 문제 →";$("quizSkip").textContent="모르겠어요"}
+function answerQuiz(n){if(quizAnswered)return;quizAnswered=true;const q=quizItems[quizPos],chosen=q.options[n];if(chosen.correct)quizScore++;[...$("quizOptions").children].forEach((b,i)=>{b.disabled=true;if(q.options[i].correct)b.classList.add("selected")});$("quizFeedback").hidden=false;$("quizFeedback").textContent=chosen.correct?"정답이에요! 잘 기억하고 있네요.":`아쉬워요. 정답은 ${q.askRef?q.item.ref:q.item.text} 입니다.`;$("quizNext").disabled=false}
+$("quizOpen").addEventListener("click",makeQuiz);$("closeQuiz").addEventListener("click",closeQuiz);$("quizOverlay").addEventListener("click",e=>{if(e.target===$("quizOverlay"))closeQuiz()});
+$("quizSkip").addEventListener("click",()=>{if(quizPos>=quizItems.length){closeQuiz();return}if(!quizAnswered){const q=quizItems[quizPos];$("quizFeedback").hidden=false;$("quizFeedback").textContent=`정답: ${q.askRef?q.item.text:q.item.ref}`;$("quizNext").disabled=false;quizAnswered=true}else{quizPos++;renderQuiz()}});
+$("quizNext").addEventListener("click",()=>{if(quizPos>=quizItems.length){makeQuiz();return}if(!quizAnswered)return;if(quizPos===quizItems.length-1){quizPos++;renderQuiz()}else{quizPos++;renderQuiz()}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeEditor();closeQuiz();closeTypeTest()}if($("editOverlay").classList.contains("show")||$("quizOverlay").classList.contains("show")||$("typeTestOverlay").classList.contains("show"))return;if(e.key==="ArrowLeft")move(-1);if(e.key==="ArrowRight")move(1);if(e.key===" "){e.preventDefault();flip()}});
+render();
+</script>
+</body></html>
