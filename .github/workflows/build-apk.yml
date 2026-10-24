@@ -24,18 +24,15 @@ jobs:
       with:
         node-version: '20'
 
-    - name: Setup App & Capacitor
+    - name: Create Web Directory
       run: |
-        cat << 'EOF' > package.json
-        {
-          "name": "bible-app",
-          "version": "1.0.0",
-          "private": true
-        }
-        EOF
-        npm install @capacitor/core@latest @capacitor/cli@latest @capacitor/android@latest
         mkdir -p www
         cp index.html www/index.html
+
+    - name: Initialize Capacitor
+      run: |
+        npm init -y
+        npm install @capacitor/core @capacitor/cli @capacitor/android
         npx cap init bibleapp com.bible.verseapp --web-dir www
         npx cap add android
         npx cap sync android
