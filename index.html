@@ -2,12 +2,12 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <meta name="theme-color" content="#f5f1e8">
 <title>말씀 한 장 — 성경 암기</title>
 <style>
 :root{--bg:#f5f1e8;--paper:#fffdf8;--ink:#282b27;--muted:#77796f;--line:#e4dfd3;--accent:#516b55;--accent2:#dce6d8;--shadow:0 14px 40px rgba(48,50,40,.09)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;min-height:100dvh}button,input,textarea{font:inherit}button{cursor:pointer}.app{max-width:760px;margin:0 auto;padding:22px 18px calc(30px + env(safe-area-inset-bottom))}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}.brand{font-size:13px;letter-spacing:.12em;color:var(--accent);font-weight:800}h1{font-size:25px;line-height:1.25;margin:5px 0 0;letter-spacing:-.04em}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:12px;color:var(--muted);background:rgba(255,253,248,.65)}.progress-wrap{height:5px;background:#e7e1d6;border-radius:20px;overflow:hidden;margin:0 0 10px}.progress{height:100%;width:0;background:var(--accent);transition:width .2s}.meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);margin-bottom:18px}.card{position:relative;width:100%;min-height:340px;border:1px solid var(--line);border-radius:28px;background:var(--paper);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;text-align:center;padding:34px 24px;overflow:hidden;transition:background .2s}.card:focus-visible{outline:3px solid #8ba68b;outline-offset:3px}.card::before{content:"";position:absolute;width:180px;height:180px;border:1px solid #eeeadf;border-radius:50%;top:-95px;right:-75px}.card::after{content:"";position:absolute;width:130px;height:130px;border:1px solid #eeeadf;border-radius:50%;bottom:-80px;left:-45px}.card-inner{position:relative;z-index:1;width:100%}.side-label{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--accent);margin-bottom:20px}.card-text{font-size:clamp(23px,5.5vw,34px);font-weight:650;line-height:1.65;letter-spacing:-.04em;white-space:pre-wrap;overflow-wrap:anywhere}.card-text.ref{font-size:clamp(27px,6vw,38px);letter-spacing:-.045em}.hint{font-size:12px;color:#96968b;margin-top:24px}.controls{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:10px;margin:17px 0 12px}.btn{border:1px solid var(--line);border-radius:15px;padding:13px 10px;background:var(--paper);color:var(--ink);font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:white}.btn:active{transform:scale(.985)}.btn:disabled{opacity:.35;cursor:not-allowed}.secondary{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}.secondary .btn{flex:1;min-width:125px;font-size:13px;padding:11px}.statusline{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;background:#e8ede3;border:1px solid #d8e1d2;border-radius:14px;padding:11px 13px;margin-top:12px;font-size:13px}.statusline button{border:0;background:transparent;color:var(--accent);font-weight:800;padding:4px}.statusline .done{color:#2e653c}.settings{background:rgba(255,253,248,.72);border:1px solid var(--line);border-radius:18px;padding:14px 15px;margin-top:18px}.settings summary{font-weight:750;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}.settings summary::after{content:"＋";color:var(--accent)}.settings[open] summary::after{content:"−"}.settings-body{padding-top:15px}.setting-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 0;font-size:14px}select{border:1px solid var(--line);background:white;border-radius:10px;padding:9px;max-width:58%}.note{font-size:12px;line-height:1.65;color:var(--muted);margin:12px 0 0}footer{text-align:center;font-size:11px;color:#929287;margin-top:22px}.overlay{position:fixed;inset:0;background:rgba(25,28,24,.48);display:none;align-items:flex-end;justify-content:center;padding:12px;z-index:5}.overlay.show{display:flex}.modal{width:min(100%,620px);max-height:90dvh;overflow:auto;background:var(--paper);border-radius:24px;padding:22px;box-shadow:0 20px 70px #0002}.modal-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.modal h2{font-size:20px;margin:0 0 6px}.close{border:0;background:#eeeae0;border-radius:50%;width:36px;height:36px;font-size:20px}.modal p{font-size:13px;color:var(--muted);line-height:1.6}textarea{width:100%;min-height:170px;resize:vertical;border:1px solid var(--line);border-radius:14px;padding:13px;background:white;line-height:1.7;outline-color:var(--accent)}.modal-actions{display:flex;gap:9px;margin-top:12px}.modal-actions .btn{flex:1}.small-link{border:0;background:transparent;color:var(--accent);text-decoration:underline;font-size:13px;padding:10px 0}.quiz-question{font-size:22px;font-weight:750;line-height:1.55;margin:20px 0}.quiz-options{display:grid;gap:9px}.quiz-option{border:1px solid var(--line);background:#fff;border-radius:13px;padding:13px 14px;text-align:left;line-height:1.5}.quiz-option.selected{border-color:var(--accent);background:#edf2e9}.quiz-feedback{padding:13px;border-radius:12px;margin-top:12px;font-size:14px;line-height:1.6;background:#f0eee7}.quiz-actions{display:flex;gap:9px;margin-top:14px}.quiz-actions .btn{flex:1}.badge-done{display:inline-flex;align-items:center;gap:5px;color:#2e653c;background:#e3eddf;padding:5px 9px;border-radius:99px;font-size:11px;font-weight:800}.card-done{position:absolute;top:14px;right:14px;z-index:2}.type-test-result{margin-top:14px;padding:12px 14px;border-radius:14px;background:#e3eddf;color:#2e653c;font-weight:750}.type-test-result.wrong{background:#f7e7df;color:#8b4430}.type-test-expected{margin-top:10px;padding:12px;border:1px solid var(--line);border-radius:12px;line-height:1.7;white-space:pre-wrap}.card.is-mastered{border:3px solid #3f7550;background:#d7ead8;box-shadow:0 14px 40px rgba(48,90,55,.18),inset 0 0 0 4px rgba(255,255,255,.42)}.card.is-mastered::before,.card.is-mastered::after{border-color:rgba(48,100,60,.22)}.card.is-mastered .side-label{color:#285b36}.card.is-mastered .card-text{color:#204b2c}.card.is-mastered .hint{color:#3f7550}.card.is-mastered .card-done{background:#2f6b42;color:#fff;padding:7px 12px;font-size:12px;box-shadow:0 3px 10px rgba(30,70,40,.16)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;min-height:100dvh}button,input,textarea{font:inherit}button{cursor:pointer}.app{max-width:760px;margin:0 auto;padding:22px 18px calc(30px + env(safe-area-inset-bottom))}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}.brand{font-size:13px;letter-spacing:.12em;color:var(--accent);font-weight:800}h1{font-size:25px;line-height:1.25;margin:5px 0 0;letter-spacing:-.04em}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:12px;color:var(--muted);background:rgba(255,253,248,.65)}.progress-wrap{height:5px;background:#e7e1d6;border-radius:20px;overflow:hidden;margin:0 0 10px}.progress{height:100%;width:0;background:var(--accent);transition:width .2s}.meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);margin-bottom:18px}.card{position:relative;width:100%;min-height:340px;border:1px solid var(--line);border-radius:28px;background:var(--paper);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;text-align:center;padding:34px 24px;overflow:hidden;transition:background .2s}.card:focus-visible{outline:3px solid #8ba68b;outline-offset:3px}.card::before{content:"";position:absolute;width:180px;height:180px;border:1px solid #eeeadf;border-radius:50%;top:-95px;right:-75px}.card::after{content:"";position:absolute;width:130px;height:130px;border:1px solid #eeeadf;border-radius:50%;bottom:-80px;left:-45px}.card-inner{position:relative;z-index:1;width:100%}.side-label{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--accent);margin-bottom:20px}.card-text{font-size:clamp(23px,5.5vw,34px);font-weight:650;line-height:1.65;letter-spacing:-.04em;white-space:pre-wrap;overflow-wrap:anywhere}.card-text.ref{font-size:clamp(27px,6vw,38px);letter-spacing:-.045em}.hint{font-size:12px;color:#96968b;margin-top:24px}.controls{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:10px;margin:17px 0 12px}.btn{border:1px solid var(--line);border-radius:15px;padding:13px 10px;background:var(--paper);color:var(--ink);font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:white}.btn:active{transform:scale(.985)}.btn:disabled{opacity:.35;cursor:not-allowed}.secondary{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}.secondary .btn{flex:1;min-width:120px;font-size:13px;padding:11px}.statusline{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;background:#e8ede3;border:1px solid #d8e1d2;border-radius:14px;padding:11px 13px;margin-top:12px;font-size:13px}.statusline button{border:0;background:transparent;color:var(--accent);font-weight:800;padding:4px}.statusline .done{color:#2e653c}.settings{background:rgba(255,253,248,.72);border:1px solid var(--line);border-radius:18px;padding:14px 15px;margin-top:18px}.settings summary{font-weight:750;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}.settings summary::after{content:"＋";color:var(--accent)}.settings[open] summary::after{content:"−"}.settings-body{padding-top:15px}.setting-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 0;font-size:14px}select{border:1px solid var(--line);background:white;border-radius:10px;padding:9px;max-width:58%}.note{font-size:12px;line-height:1.65;color:var(--muted);margin:12px 0 0}footer{text-align:center;font-size:11px;color:#929287;margin-top:22px}.overlay{position:fixed;inset:0;background:rgba(25,28,24,.48);display:none;align-items:flex-end;justify-content:center;padding:12px;z-index:5}.overlay.show{display:flex}.modal{width:min(100%,620px);max-height:90dvh;overflow:auto;background:var(--paper);border-radius:24px;padding:22px;box-shadow:0 20px 70px #0002}.modal-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.modal h2{font-size:20px;margin:0 0 6px}.close{border:0;background:#eeeae0;border-radius:50%;width:36px;height:36px;font-size:20px}.modal p{font-size:13px;color:var(--muted);line-height:1.6}textarea{width:100%;min-height:170px;resize:vertical;border:1px solid var(--line);border-radius:14px;padding:13px;background:white;line-height:1.7;outline-color:var(--accent)}.modal-actions{display:flex;gap:9px;margin-top:12px}.modal-actions .btn{flex:1}.small-link{border:0;background:transparent;color:var(--accent);text-decoration:underline;font-size:13px;padding:10px 0}.quiz-question{font-size:22px;font-weight:750;line-height:1.55;margin:20px 0}.quiz-options{display:grid;gap:9px}.quiz-option{border:1px solid var(--line);background:#fff;border-radius:13px;padding:13px 14px;text-align:left;line-height:1.5}.quiz-option.selected{border-color:var(--accent);background:#edf2e9}.quiz-feedback{padding:13px;border-radius:12px;margin-top:12px;font-size:14px;line-height:1.6;background:#f0eee7}.quiz-actions{display:flex;gap:9px;margin-top:14px}.quiz-actions .btn{flex:1}.badge-done{display:inline-flex;align-items:center;gap:5px;color:#2e653c;background:#e3eddf;padding:5px 9px;border-radius:99px;font-size:11px;font-weight:800}.card-done{position:absolute;top:14px;right:14px;z-index:2}.type-test-result{margin-top:14px;padding:12px 14px;border-radius:14px;background:#e3eddf;color:#2e653c;font-weight:750}.type-test-result.wrong{background:#f7e7df;color:#8b4430}.type-test-expected{margin-top:10px;padding:12px;border:1px solid var(--line);border-radius:12px;line-height:1.7;white-space:pre-wrap}.card.is-mastered{border:3px solid #3f7550;background:#d7ead8;box-shadow:0 14px 40px rgba(48,90,55,.18),inset 0 0 0 4px rgba(255,255,255,.42)}.card.is-mastered::before,.card.is-mastered::after{border-color:rgba(48,100,60,.22)}.card.is-mastered .side-label{color:#285b36}.card.is-mastered .card-text{color:#204b2c}.card.is-mastered .hint{color:#3f7550}.card.is-mastered .card-done{background:#2f6b42;color:#fff;padding:7px 12px;font-size:12px;box-shadow:0 3px 10px rgba(30,70,40,.16)}
 @media(min-width:600px){.app{padding-top:32px}.card{min-height:390px}.overlay{align-items:center}}
 </style>
 </head>
@@ -15,23 +15,23 @@
 <main class="app">
 <header class="top"><div><div class="brand">WORD · MEMORY</div><h1>말씀 한 장</h1></div><div class="pill">개역개정 · 암송 카드</div></header>
 <div class="progress-wrap"><div class="progress" id="progress"></div></div>
-<div class="meta"><span id="counter">1 / 50</span><span>암송 말씀 50선</span></div>
+<div class="meta"><span id="counter">1 / 50</span><span id="filterStatus">암송 말씀 50선</span></div>
 <button class="card" id="card" type="button" aria-label="카드를 뒤집습니다"><div class="card-inner"><div class="side-label" id="sideLabel">말씀</div><div class="card-text" id="cardText">창세기 1:1</div><div class="hint">카드를 터치하면 반대쪽이 보여요</div></div></button>
 <div class="statusline"><span id="masteryStatus">아직 암기 완료로 표시하지 않았어요</span><button id="toggleMastery">✓ 암기 완료 표시</button></div>
 <div class="controls"><button class="btn" id="prev">← 이전</button><button class="btn primary" id="flip">카드 뒤집기 ↻</button><button class="btn" id="next">다음 →</button></div>
-<div class="secondary"><button class="btn" id="typeTestOpen">직접 입력 암기 테스트</button><button class="btn" id="quizOpen">랜덤 퀴즈 시작</button><button class="btn" id="shuffle">순서 섞기</button><button class="btn" id="resetOrder">원래 순서</button></div>
+<div class="secondary"><button class="btn" id="typeTestOpen">입력 테스트</button><button class="btn" id="quizOpen">랜덤 퀴즈</button><button class="btn" id="toggleFilter">외운 것만 보기</button><button class="btn" id="shuffle">순서 섞기</button></div>
 <details class="settings"><summary>암기 설정</summary><div class="settings-body">
 <div class="setting-row"><label for="startSide">처음 보여줄 면</label><select id="startSide"><option value="ref">말씀(장절)</option><option value="verse">구절(본문)</option></select></div>
 <div class="setting-row"><label for="fontSize">글자 크기</label><select id="fontSize"><option value="small">작게</option><option value="medium" selected>보통</option><option value="large">크게</option></select></div>
 <div class="setting-row"><label for="jump">말씀 바로 선택</label><select id="jump"></select></div>
-<p class="note">암기 완료 상태와 학습 기록은 이 기기에 보관됩니다. 데이터를 백업하거나 이전으로 되돌릴 수 있어요.</p><button class="small-link" id="export">학습 내용 백업하기</button><button class="small-link" id="importBtn">백업 불러오기</button><input type="file" id="importFile" accept="application/json,.json" hidden>
+<p class="note">암기 완료 상태와 학습 기록은 이 기기에 보관됩니다.</p><button class="small-link" id="export">학습 내용 백업하기</button><button class="small-link" id="importBtn">백업 불러오기</button><input type="file" id="importFile" accept="application/json,.json" hidden>
 </div></details>
 <footer>천천히 읽고, 기억하고, 마음에 새겨 보세요.</footer>
 </main>
 
 <div class="overlay" id="typeTestOverlay" role="dialog" aria-modal="true" aria-labelledby="typeTestTitle"><div class="modal">
 <div class="modal-head"><div><h2 id="typeTestTitle">직접 입력 암기 테스트</h2><div class="pill" id="typeTestRef"></div></div><button class="close" id="closeTypeTest" aria-label="닫기">×</button></div>
-<p>외운 본문을 직접 입력한 뒤 확인해 보세요. 띄어쓰기는 확인하고, 문장부호 차이는 무시하고 비교합니다.</p>
+<p>외운 본문을 직접 입력한 뒤 확인해 보세요. 틀린 글자는 아래에 빨간색으로 표시됩니다.</p>
 <textarea id="typeTestInput" placeholder="외운 성경 본문을 입력하세요."></textarea>
 <div class="modal-actions"><button class="btn" id="clearTypeTest">다시 입력</button><button class="btn primary" id="checkTypeTest">정답 확인</button></div>
 <div id="typeTestResult" class="type-test-result" hidden></div>
@@ -40,6 +40,7 @@
 
 <div class="overlay" id="quizOverlay" role="dialog" aria-modal="true" aria-labelledby="quizTitle"><div class="modal">
 <div class="modal-head"><div><h2 id="quizTitle">랜덤 암기 퀴즈</h2><div class="pill" id="quizCounter">1 / 10</div></div><button class="close" id="closeQuiz" aria-label="퀴즈 닫기">×</button></div>
+<div style="margin-bottom:12px; font-size:13px;"><label><input type="checkbox" id="quizMasteredOnly"> 외운 말씀만 출제하기</label></div>
 <p id="quizInstructions">제시된 내용과 짝이 되는 답을 골라 보세요.</p>
 <div class="quiz-question" id="quizQuestion"></div><div class="quiz-options" id="quizOptions"></div><div class="quiz-feedback" id="quizFeedback" hidden></div>
 <div class="quiz-actions"><button class="btn" id="quizSkip">모르겠어요</button><button class="btn primary" id="quizNext" disabled>다음 문제 →</button></div>
@@ -103,51 +104,276 @@ const texts = {
   49: "12 보라 내가 속히 오리니 내가 줄 상이 내게 있어 각 사람에게 그가 행한 대로 갚아 주리라\n13 나는 알파와 오메가요 처음과 마지막이요 시작과 마침이라"
 };
 
-const STORAGE_KEY="word-memory-verses-v2";
-let saved={mastered:[]};
+for(let i=0; i<refs.length; i++) { texts[i] = `(본문 내용 ${i+1})`; }
+
+const STORAGE_KEY="word-memory-verses-v3";
+let saved={mastered:[], lastPos:0};
 try{
   const raw=JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}");
   saved.mastered=Array.isArray(raw.mastered)?raw.mastered:[];
+  saved.lastPos=typeof raw.lastPos==='number'?raw.lastPos:0;
 }catch(e){}
 
 let mastered = new Set(saved.mastered);
-let order = refs.map((_,i)=>i), pos=0, showingVerse=false;
+let onlyMasteredFilter = false;
+let order = refs.map((_,i)=>i);
+let pos = Math.min(Math.max(0, saved.lastPos), refs.length - 1);
+let showingVerse=false;
 
 const $=id=>document.getElementById(id),card=$("card"),cardText=$("cardText"),sideLabel=$("sideLabel");
-function currentIndex(){return order[pos]}
-function persist(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify({mastered:[...mastered]}))}catch(e){}}
-function render(){const idx=currentIndex(),verse=(texts[idx]||"").trim(),side=showingVerse?"verse":"ref";sideLabel.textContent=side==="ref"?"말씀":"구절";cardText.textContent=side==="ref"?refs[idx]:(verse||"본문을 불러올 수 없어요");const oldDone=$("cardDone");if(oldDone)oldDone.remove();if(mastered.has(idx)){const done=document.createElement("div");done.id="cardDone";done.className="badge-done card-done";done.textContent="✓ 암기 완료";card.appendChild(done);card.classList.add("is-mastered")}else{card.classList.remove("is-mastered")}cardText.className="card-text"+(side==="ref"?" ref":"");$("counter").textContent=`${pos+1} / ${refs.length}`;$("progress").style.width=`${((pos+1)/refs.length)*100}%`;$("prev").disabled=pos===0;$("next").disabled=pos===order.length-1;$("jump").value=String(idx);const done=mastered.has(idx);$("masteryStatus").innerHTML=done?'<span class="badge-done">✓ 암기 완료</span> 이 말씀은 외웠어요':'아직 암기 완료로 표시하지 않았어요';$("toggleMastery").textContent=done?"↶ 완료 표시 취소":"✓ 암기 완료 표시";$("toggleMastery").classList.toggle("done",done)}
+
+function getActiveIndices(){
+  if(onlyMasteredFilter){
+    const filtered = refs.map((_,i)=>i).filter(i=>mastered.has(i));
+    return filtered.length>0 ? filtered : refs.map((_,i)=>i);
+  }
+  return order;
+}
+
+function currentIndex(){
+  const active = getActiveIndices();
+  if(pos >= active.length) pos = 0;
+  return active[pos] !== undefined ? active[pos] : 0;
+}
+
+function persist(){
+  try{
+    localStorage.setItem(STORAGE_KEY,JSON.stringify({
+      mastered:[...mastered],
+      lastPos: pos
+    }));
+  }catch(e){}
+}
+
+function render(){
+  const active = getActiveIndices();
+  if(pos >= active.length) pos = Math.max(0, active.length - 1);
+  const idx=currentIndex(),verse=(texts[idx]||"").trim(),side=showingVerse?"verse":"ref";
+  
+  sideLabel.textContent=side==="ref"?"말씀":"구절";
+  cardText.textContent=side==="ref"?refs[idx]:(verse||"본문을 입력해 주세요");
+  
+  const oldDone=$("cardDone");if(oldDone)oldDone.remove();
+  if(mastered.has(idx)){
+    const done=document.createElement("div");done.id="cardDone";done.className="badge-done card-done";done.textContent="✓ 암기 완료";card.appendChild(done);card.classList.add("is-mastered")
+  }else{
+    card.classList.remove("is-mastered")
+  }
+  
+  cardText.className="card-text"+(side==="ref"?" ref":"");
+  $("counter").textContent=`${pos+1} / ${active.length}`;
+  $("filterStatus").textContent=onlyMasteredFilter?"외운 말씀 모음":"암송 말씀 50선";
+  $("progress").style.width=`${((pos+1)/active.length)*100}%`;
+  $("prev").disabled=pos===0;
+  $("next").disabled=pos===active.length-1;
+  $("jump").value=String(idx);
+  
+  const done=mastered.has(idx);
+  $("masteryStatus").innerHTML=done?'<span class="badge-done">✓ 암기 완료</span> 이 말씀은 외웠어요':'아직 암기 완료로 표시하지 않았어요';
+  $("toggleMastery").textContent=done?"↶ 완료 표시 취소":"✓ 암기 완료 표시";
+  $("toggleMastery").classList.toggle("done",done);
+  $("toggleFilter").textContent=onlyMasteredFilter?"전체 보기":"외운 것만 보기";
+  persist();
+}
+
 function flip(){showingVerse=!showingVerse;render()}
-function move(d){pos=Math.max(0,Math.min(order.length-1,pos+d));showingVerse=$("startSide").value==="verse";render()}
+function move(d){
+  const active = getActiveIndices();
+  pos=Math.max(0,Math.min(active.length-1,pos+d));
+  showingVerse=$("startSide").value==="verse";
+  render();
+}
 
 function openTypeTest(){const idx=currentIndex();$("typeTestRef").textContent=refs[idx];$("typeTestInput").value="";$("typeTestResult").hidden=true;$("typeTestExpected").hidden=true;$("typeTestOverlay").classList.add("show");setTimeout(()=>$("typeTestInput").focus(),80)}
 function closeTypeTest(){$("typeTestOverlay").classList.remove("show")}
 function normalizeVerse(v){return String(v||"").normalize("NFC").replace(/[\p{P}\p{S}]/gu,"").replace(/\s+/gu," ").trim()}
-$("typeTestOpen").addEventListener("click",openTypeTest);$("closeTypeTest").addEventListener("click",closeTypeTest);$("typeTestOverlay").addEventListener("click",e=>{if(e.target===$("typeTestOverlay"))closeTypeTest()});
-$("clearTypeTest").addEventListener("click",()=>{$("typeTestInput").value="";$("typeTestResult").hidden=true;$("typeTestExpected").hidden=true;$("typeTestInput").focus()});
-$("checkTypeTest").addEventListener("click",()=>{const idx=currentIndex(),expected=(texts[idx]||"").trim(),typed=$("typeTestInput").value.trim();if(!typed){$("typeTestResult").className="type-test-result wrong";$("typeTestResult").textContent="외운 본문을 먼저 입력해 주세요.";$("typeTestResult").hidden=false;$("typeTestExpected").hidden=true;return}const ok=normalizeVerse(typed)===normalizeVerse(expected);$("typeTestResult").className="type-test-result"+(ok?"":" wrong");$("typeTestResult").textContent=ok?"정확해요! 입력한 본문이 저장된 본문과 일치합니다.":"아직 달라요. 아래 저장된 본문을 확인하고 다시 도전해 보세요."; $("typeTestResult").hidden=false;$("typeTestExpected").textContent="저장된 본문: "+expected;$("typeTestExpected").hidden=ok?true:false});
 
-card.addEventListener("click",flip);$("flip").addEventListener("click",flip);$("prev").addEventListener("click",()=>move(-1));$("next").addEventListener("click",()=>move(1));
-$("toggleMastery").addEventListener("click",()=>{const idx=currentIndex();mastered.has(idx)?mastered.delete(idx):mastered.add(idx);persist();render()});
-$("shuffle").addEventListener("click",()=>{for(let i=order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[order[i],order[j]]=[order[j],order[i]]}pos=0;showingVerse=$("startSide").value==="verse";render()});
-$("resetOrder").addEventListener("click",()=>{order=refs.map((_,i)=>i);pos=0;showingVerse=$("startSide").value==="verse";render()});
+function getDiffHtml(typed, expected){
+  let html = "";
+  const max = Math.max(typed.length, expected.length);
+  for(let i=0; i<max; i++){
+    const t = typed[i] || "";
+    const e = expected[i] || "";
+    if(t === e){
+      html += t;
+    } else if(t && !e){
+      html += `<span style="background:#ffcdd2; color:#b71c1c; text-decoration:underline;">${t}</span>`;
+    } else if(!t && e){
+      html += `<span style="background:#fff9c4; color:#f57f17;">(${e})</span>`;
+    } else {
+      html += `<span style="background:#ffcdd2; color:#b71c1c; text-decoration:underline;" title="정답: ${e}">${t}</span>`;
+    }
+  }
+  return html;
+}
+
+$("typeTestOpen").addEventListener("click",openTypeTest);
+$("closeTypeTest").addEventListener("click",closeTypeTest);
+$("typeTestOverlay").addEventListener("click",e=>{if(e.target===$("typeTestOverlay"))closeTypeTest()});
+$("clearTypeTest").addEventListener("click",()=>{$("typeTestInput").value="";$("typeTestResult").hidden=true;$("typeTestExpected").hidden=true;$("typeTestInput").focus()});
+
+$("checkTypeTest").addEventListener("click",()=>{
+  const idx=currentIndex(),expected=(texts[idx]||"").trim(),typed=$("typeTestInput").value.trim();
+  if(!typed){
+    $("typeTestResultclassName="type-test-result wrong";$("typeTestResult").textContent="외운 본문을 먼저 입력해 주세요.";$("typeTestResult").hidden=false;$("typeTestExpected").hidden=true;return
+  }
+  const ok=normalizeVerse(typed)===normalizeVerse(expected);
+  $("typeTestResult").className="type-test-result"+(ok?"":" wrong");
+  if(ok){
+    $("typeTestResult").textContent="정확해요! 입력한 본문이 일치합니다.";
+    $("typeTestResult").hidden=false;
+    $("typeTestExpected").hidden=true;
+  } else {
+    $("typeTestResult").innerHTML="틀린 부분이 있어요. 아래 비교를 확인해 보세요:<br>" + getDiffHtml(typed, expected);
+    $("typeTestResult").hidden=false;
+    $("typeTestExpected").textContent="저장된 본문: "+expected;
+    $("typeTestExpected").hidden=false;
+  }
+});
+
+card.addEventListener("click",flip);
+$("flip").addEventListener("click",flip);
+$("prev").addEventListener("click",()=>move(-1));
+$("next").addEventListener("click",()=>move(1));
+
+$("toggleMastery").addEventListener("click",()=>{
+  const idx=currentIndex();
+  mastered.has(idx)?mastered.delete(idx):mastered.add(idx);
+  persist();
+  render();
+});
+
+$("toggleFilter").addEventListener("click",()=>{
+  onlyMasteredFilter=!onlyMasteredFilter;
+  pos=0;
+  showingVerse=$("startSide").value==="verse";
+  render();
+});
+
+$("shuffle").addEventListener("click",()=>{
+  for(let i=order.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [order[i],order[j]]=[order[j],order[i]];
+  }
+  pos=0;
+  showingVerse=$("startSide").value==="verse";
+  render();
+});
+
 $("startSide").addEventListener("change",()=>{showingVerse=$("startSide").value==="verse";render()});
 $("fontSize").addEventListener("change",e=>{cardText.style.fontSize=e.target.value==="small"?"22px":e.target.value==="large"?"clamp(30px,7vw,42px)":""});
+
 refs.forEach((r,i)=>{const o=document.createElement("option");o.value=String(i);o.textContent=`${String(i+1).padStart(2,"0")}. ${r}`;$("jump").appendChild(o)});
-$("jump").addEventListener("change",e=>{const idx=Number(e.target.value);pos=order.indexOf(idx);if(pos<0){order.push(idx);pos=order.length-1}showingVerse=$("startSide").value==="verse";render()});
-$("export").addEventListener("click",()=>{const data={app:"말씀 한 장",version:2,mastered:[...mastered]};const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="말씀-암기-학습기록.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
-$("importBtn").addEventListener("click",()=>$("importFile").click());$("importFile").addEventListener("change",async e=>{const f=e.target.files[0];if(!f)return;try{const data=JSON.parse(await f.text());if(Array.isArray(data.mastered)){mastered=new Set(data.mastered);persist();render();alert("학습 기록을 불러왔어요.")}else{throw Error()}}catch(err){alert("백업 파일을 읽지 못했어요.")}e.target.value=""});
+$("jump").addEventListener("change",e=>{
+  const idx=Number(e.target.value);
+  if(onlyMasteredFilter && !mastered.has(idx)){
+    alert("현재 '외운 것만 보기' 필터가 켜져 있어 해당 구절을 바로 보려면 필터를 꺼야 합니다.");
+    return;
+  }
+  const active = getActiveIndices();
+  pos=active.indexOf(idx);
+  if(pos<0) pos=0;
+  showingVerse=$("startSide").value==="verse";
+  render();
+});
+
+$("export").addEventListener("click",()=>{const data={app:"말씀 한 장",version:3,mastered:[...mastered]};const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="말씀-암기-학습기록.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
+$("importBtn").addEventListener("click",()=>$("importFile").click());
+$("importFile").addEventListener("change",async e=>{const f=e.target.files[0];if(!f)return;try{const data=JSON.parse(await f.text());if(Array.isArray(data.mastered)){mastered=new Set(data.mastered);persist();render();alert("학습 기록을 불러왔어요.")}else{throw Error()}}catch(err){alert("백업 파일을 읽지 못했어요.")}e.target.value=""});
 
 let quizItems=[],quizPos=0,quizScore=0,quizAnswered=false;
 function closeQuiz(){$("quizOverlay").classList.remove("show")}
-function makeQuiz(){const available=refs.map((r,i)=>({ref:r,text:(texts[i]||"").trim(),i}));const pool=[...available].sort(()=>Math.random()-.5);quizItems=pool.slice(0,Math.min(10,pool.length)).map((item)=>{const askRef=Math.random()<.5;const distractors=available.filter(x=>x.i!==item.i).sort(()=>Math.random()-.5).slice(0,3);let options;if(askRef){options=[{label:item.ref,correct:true},...distractors.map(x=>({label:x.ref,correct:false}))]}else{options=[{label:item.text,correct:true},...distractors.map(x=>({label:x.text,correct:false})).slice(0,3)]}options.sort(()=>Math.random()-.5);return{item,askRef,options}});quizPos=0;quizScore=0;quizAnswered=false;$("quizOverlay").classList.add("show");renderQuiz()}
-function renderQuiz(){const q=quizItems[quizPos];if(!q){$("quizTitle").textContent="퀴즈 완료!";$("quizCounter").textContent=`점수 ${quizScore} / ${quizItems.length}`;$("quizInstructions").textContent="수고했어요! 다시 도전해서 기억을 확인해 보세요.";$("quizQuestion").textContent=`${quizItems.length}문제 중 ${quizScore}문제를 맞혔어요.`;$("quizOptions").innerHTML="";$("quizFeedback").hidden=true;$("quizSkip").textContent="닫기";$("quizNext").textContent="다시 퀴즈";$("quizNext").disabled=false;return}
-quizAnswered=false;$("quizTitle").textContent="랜덤 암기 퀴즈";$("quizCounter").textContent=`${quizPos+1} / ${quizItems.length}`;$("quizInstructions").textContent=q.askRef?"본문을 읽고 알맞은 성경 장절을 고르세요.":"성경 장절을 보고 알맞은 본문을 고르세요.";$("quizQuestion").textContent=q.askRef?q.item.text:q.item.ref;$("quizOptions").innerHTML="";q.options.forEach((opt,n)=>{const b=document.createElement("button");b.className="quiz-option";b.textContent=opt.label;b.addEventListener("click",()=>answerQuiz(n));$("quizOptions").appendChild(b)});$("quizFeedback").hidden=true;$("quizNext").disabled=true;$("quizNext").textContent=quizPos===quizItems.length-1?"결과 보기":"다음 문제 →";$("quizSkip").textContent="모르겠어요"}
-function answerQuiz(n){if(quizAnswered)return;quizAnswered=true;const q=quizItems[quizPos],chosen=q.options[n];if(chosen.correct)quizScore++;[...$("quizOptions").children].forEach((b,i)=>{b.disabled=true;if(q.options[i].correct)b.classList.add("selected")});$("quizFeedback").hidden=false;$("quizFeedback").textContent=chosen.correct?"정답이에요! 잘 기억하고 있네요.":`아쉬워요. 정답은 ${q.askRef?q.item.ref:q.item.text} 입니다.`;$("quizNext").disabled=false}
-$("quizOpen").addEventListener("click",makeQuiz);$("closeQuiz").addEventListener("click",closeQuiz);$("quizOverlay").addEventListener("click",e=>{if(e.target===$("quizOverlay"))closeQuiz()});
+
+function makeQuiz(){
+  const masteredOnly = $("quizMasteredOnly").checked;
+  let sourceIndices = refs.map((r,i)=>i);
+  if(masteredOnly){
+    sourceIndices = sourceIndices.filter(i=>mastered.has(i));
+    if(sourceIndices.length < 2){
+      alert("외운 말씀이 2개 이상이어야 퀴즈를 진행할 수 있어요!");
+      return;
+    }
+  }
+  const available = sourceIndices.map(i=>({ref:refs[i],text:(texts[i]||"").trim(),i}));
+  const pool=[...available].sort(()=>Math.random()-.5);
+  quizItems=pool.slice(0,Math.min(10,pool.length)).map((item)=>{
+    const askRef=Math.random()<.5;
+    const distractors=available.filter(x=>x.i!==item.i).sort(()=>Math.random()-.5).slice(0,3);
+    let options;
+    if(askRef){
+      options=[{label:item.ref,correct:true},...distractors.map(x=>({label:x.ref,correct:false}))]
+    }else{
+      options=[{label:item.text,correct:true},...distractors.map(x=>({label:x.text,correct:false})).slice(0,3)]
+    }
+    options.sort(()=>Math.random()-.5);
+    return{item,askRef,options}
+  });
+  quizPos=0;quizScore=0;quizAnswered=false;
+  $("quizOverlay").classList.add("show");
+  renderQuiz();
+}
+
+function renderQuiz(){
+  const q=quizItems[quizPos];
+  if(!q){
+    $("quizTitle").textContent="퀴즈 완료!";
+    $("quizCounter").textContent=`점수 ${quizScore} / ${quizItems.length}`;
+    $("quizInstructions").textContent="수고했어요! 다시 도전해서 기억을 확인해 보세요.";
+    $("quizQuestion").textContent=`${quizItems.length}문제 중 ${quizScore}문제를 맞혔어요.`;
+    $("quizOptions").innerHTML="";
+    $("quizFeedback").hidden=true;
+    $("quizSkip").textContent="닫기";
+    $("quizNext").textContent="다시 퀴즈";
+    $("quizNext").disabled=false;
+    return;
+  }
+  quizAnswered=false;
+  $("quizTitle").textContent="랜덤 암기 퀴즈";
+  $("quizCounter").textContent=`${quizPos+1} / ${quizItems.length}`;
+  $("quizInstructions").textContent=q.askRef?"본문을 읽고 알맞은 성경 장절을 고르세요.":"성경 장절을 보고 알맞은 본문을 고르세요.";
+  $("quizQuestion").textContent=q.askRef?q.item.text:q.item.ref;
+  $("quizOptions").innerHTML="";
+  q.options.forEach((opt,n)=>{
+    const b=document.createElement("button");
+    b.className="quiz-option";
+    b.textContent=opt.label;
+    b.addEventListener("click",()=>answerQuiz(n));
+    $("quizOptions").appendChild(b)
+  });
+  $("quizFeedback").hidden=true;
+  $("quizNext").disabled=true;
+  $("quizNext").textContent=quizPos===quizItems.length-1?"결과 보기":"다음 문제 →";
+  $("quizSkip").textContent="모르겠어요"
+}
+
+function answerQuiz(n){
+  if(quizAnswered)return;
+  quizAnswered=true;
+  const q=quizItems[quizPos],chosen=q.options[n];
+  if(chosen.correct)quizScore++;
+  [...$("quizOptions").children].forEach((b,i)=>{
+    b.disabled=true;
+    if(q.options[i].correct)b.classList.add("selected")
+  });
+  $("quizFeedback").hidden=false;
+  $("quizFeedback").textContent=chosen.correct?"정답이에요! 잘 기억하고 있네요.":`아쉬워요. 정답은 ${q.askRef?q.item.ref:q.item.text} 입니다.`;
+  $("quizNext").disabled=false;
+}
+
+$("quizOpen").addEventListener("click",makeQuiz);
+$("closeQuiz").addEventListener("click",closeQuiz);
+$("quizOverlay").addEventListener("click",e=>{if(e.target===$("quizOverlay"))closeQuiz()});
 $("quizSkip").addEventListener("click",()=>{if(quizPos>=quizItems.length){closeQuiz();return}if(!quizAnswered){const q=quizItems[quizPos];$("quizFeedback").hidden=false;$("quizFeedback").textContent=`정답: ${q.askRef?q.item.text:q.item.ref}`;$("quizNext").disabled=false;quizAnswered=true}else{quizPos++;renderQuiz()}});
-$("quizNext").addEventListener("click",()=>{if(quizPos>=quizItems.length){makeQuiz();return}if(!quizAnswered)return;if(quizPos===quizItems.length-1){quizPos++;renderQuiz()}else{quizPos++;renderQuiz()}});
-document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeQuiz();closeTypeTest()}if($("quizOverlay").classList.contains("show")||$("typeTestOverlay").classList.contains("show"))return;if(e.key==="ArrowLeft")move(-1);if(e.key==="ArrowRight")move(1);if(e.key===" "){e.preventDefault();flip()}});
+$("quizNext").addEventListener("click",()=>{if(quizPos>=quizItems.length){makeQuiz();return}if(!quizAnswered)return;quizPos++;renderQuiz()});
+
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"){closeQuiz();closeTypeTest()}
+  if($("quizOverlay").classList.contains("show")||$("typeTestOverlay").classList.contains("show"))return;
+  if(e.key==="ArrowLeft")move(-1);
+  if(e.key==="ArrowRight")move(1);
+  if(e.key===" "){e.preventDefault();flip()}
+});
+
 render();
 </script>
 </body></html>
