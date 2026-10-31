@@ -72,7 +72,7 @@ const texts = {
   17: "너는 나를 도장 같이 마음에 품고 도장 같이 팔에 두라 사랑은 죽음 같이 강하고 질투는 스올 같이 잔인하며 불길 같이 일어나니 그 기세가 여호와의 불과 같으니라",
   18: "많은 백성이 가며 이르기를 오라 우리가 여호와의 산에 오르며 야곱의 하나님의 전에 이르자 그가 그의 길을 우리에게 가르치실 것이라 우리가 그 길로 행하리라 하리니 이는 율법이 시온에서부터 나올 것이요 여호와의 말씀이 예루살렘에서부터 나올 것임이니라",
   19: "그러나 그 날 후에 내가 이스라엘 집과 맺을 언약은 이러하니 곧 내가 나의 법을 그들의 속에 두며 그들의 마음에 기록하여 나는 그들의 하나님이 되고 그들은 내 백성이 될 것이라 여호와의 말씀이니라",
-  20: "28 그 후에 내가 내 영을 만민에게 부어 주리니 너희 자녀들이 장래 일을 말할 것이며 너희 늙은이는 꿈을 꾸며 너희 젊은이는 이상을 볼 것이며\n29 그 때에 내가 또 내 영을 남종과 여종에게 부어 줄 것이며",
+  20: "28 그 후에 내가 내 영을 만민에게 부어 주리니 너희 자녀들이 장래 일을 말할 것이며 너희 늙은이는 꿈을 꾸며 너희 젊은이는 이상을 볼 것이며\n29 그 때에가 또 내 영을 남종과 여종에게 부어 줄 것이며",
   21: "주께서는 은혜로우시며 자비로우시며 노하기를 더디하시며 인애가 크시사 뜻을 돌이켜 재앙을 내리지 아니하시는 하나님이신 줄을 내가 알았음이니이다",
   22: "이러므로 너희로 말미암아 시온은 갈아엎은 밭이 되고 예루살렘은 무더기가 되고 성전의 산은 수풀의 높은 곳이 되리라",
   23: "보라 그의 마음은 교만하며 그 속에서 정직하지 못하나 의인은 그의 믿음으로 말미암아 살리라",
@@ -103,8 +103,6 @@ const texts = {
   48: "미혹하는 자가 세상에 많이 나왔나니 이는 예수 그리스도께서 육체로 오심을 부인하는 자라 이런 자가 미혹하는 자요 적그리스도니",
   49: "12 보라 내가 속히 오리니 내가 줄 상이 내게 있어 각 사람에게 그가 행한 대로 갚아 주리라\n13 나는 알파와 오메가요 처음과 마지막이요 시작과 마침이라"
 };
-
-for(let i=0; i<refs.length; i++) { texts[i] = `(본문 내용 ${i+1})`; }
 
 const STORAGE_KEY="word-memory-verses-v3";
 let saved={mastered:[], lastPos:0};
@@ -215,7 +213,11 @@ $("clearTypeTest").addEventListener("click",()=>{$("typeTestInput").value="";$("
 $("checkTypeTest").addEventListener("click",()=>{
   const idx=currentIndex(),expected=(texts[idx]||"").trim(),typed=$("typeTestInput").value.trim();
   if(!typed){
-    $("typeTestResultclassName="type-test-result wrong";$("typeTestResult").textContent="외운 본문을 먼저 입력해 주세요.";$("typeTestResult").hidden=false;$("typeTestExpected").hidden=true;return
+    $("typeTestResult").className="type-test-result wrong";
+    $("typeTestResult").textContent="외운 본문을 먼저 입력해 주세요.";
+    $("typeTestResult").hidden=false;
+    $("typeTestExpected").hidden=true;
+    return;
   }
   const ok=normalizeVerse(typed)===normalizeVerse(expected);
   $("typeTestResult").className="type-test-result"+(ok?"":" wrong");
