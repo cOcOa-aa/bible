@@ -7,7 +7,8 @@
 <title>말씀 한 장 — 성경 암기</title>
 <style>
 :root{--bg:#f5f1e8;--paper:#fffdf8;--ink:#282b27;--muted:#77796f;--line:#e4dfd3;--accent:#516b55;--accent2:#dce6d8;--shadow:0 14px 40px rgba(48,50,40,.09)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;min-height:100dvh}button,input,textarea{font:inherit}button{cursor:pointer}.app{max-width:760px;margin:0 auto;padding:22px 18px calc(30px + env(safe-area-inset-bottom))}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}.brand{font-size:13px;letter-spacing:.12em;color:var(--accent);font-weight:800}h1{font-size:25px;line-height:1.25;margin:5px 0 0;letter-spacing:-.04em}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:12px;color:var(--muted);background:rgba(255,253,248,.65)}.progress-wrap{height:5px;background:#e7e1d6;border-radius:20px;overflow:hidden;margin:0 0 10px}.progress{height:100%;width:0;background:var(--accent);transition:width .2s}.meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);margin-bottom:18px}.card{position:relative;width:100%;min-height:340px;border:1px solid var(--line);border-radius:28px;background:var(--paper);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;text-align:center;padding:34px 24px;overflow:hidden;transition:background .2s}.card:focus-visible{outline:3px solid #8ba68b;outline-offset:3px}.card::before{content:"";position:absolute;width:180px;height:180px;border:1px solid #eeeadf;border-radius:50%;top:-95px;right:-75px}.card::after{content:"";position:absolute;width:130px;height:130px;border:1px solid #eeeadf;border-radius:50%;bottom:-80px;left:-45px}.card-inner{position:relative;z-index:1;width:100%}.side-label{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--accent);margin-bottom:20px}.card-text{font-size:clamp(23px,5.5vw,34px);font-weight:650;line-height:1.65;letter-spacing:-.04em;white-space:pre-wrap;overflow-wrap:anywhere}.card-text.ref{font-size:clamp(27px,6vw,38px);letter-spacing:-.045em}.hint{font-size:12px;color:#96968b;margin-top:24px}.controls{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:10px;margin:17px 0 12px}.btn{border:1px solid var(--line);border-radius:15px;padding:13px 10px;background:var(--paper);color:var(--ink);font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:white}.btn:active{transform:scale(.985)}.btn:disabled{opacity:.35;cursor:not-allowed}.secondary{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}.secondary .btn{flex:1;min-width:120px;font-size:13px;padding:11px}.statusline{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;background:#e8ede3;border:1px solid #d8e1d2;border-radius:14px;padding:11px 13px;margin-top:12px;font-size:13px}.statusline button{border:0;background:transparent;color:var(--accent);font-weight:800;padding:4px}.statusline .done{color:#2e653c}.settings{background:rgba(255,253,248,.72);border:1px solid var(--line);border-radius:18px;padding:14px 15px;margin-top:18px}.settings summary{font-weight:750;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}.settings summary::after{content:"＋";color:var(--accent)}.settings[open] summary::after{content:"−"}.settings-body{padding-top:15px}.setting-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 0;font-size:14px}select{border:1px solid var(--line);background:white;border-radius:10px;padding:9px;max-width:58%}.note{font-size:12px;line-height:1.65;color:var(--muted);margin:12px 0 0}footer{text-align:center;font-size:11px;color:#929287;margin-top:22px}.overlay{position:fixed;inset:0;background:rgba(25,28,24,.48);display:none;align-items:flex-end;justify-content:center;padding:12px;z-index:5}.overlay.show{display:flex}.modal{width:min(100%,620px);max-height:90dvh;overflow:auto;background:var(--paper);border-radius:24px;padding:22px;box-shadow:0 20px 70px #0002}.modal-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.modal h2{font-size:20px;margin:0 0 6px}.close{border:0;background:#eeeae0;border-radius:50%;width:36px;height:36px;font-size:20px}.modal p{font-size:13px;color:var(--muted);line-height:1.6}textarea{width:100%;min-height:170px;resize:vertical;border:1px solid var(--line);border-radius:14px;padding:13px;background:white;line-height:1.7;outline-color:var(--accent)}.modal-actions{display:flex;gap:9px;margin-top:12px}.modal-actions .btn{flex:1}.small-link{border:0;background:transparent;color:var(--accent);text-decoration:underline;font-size:13px;padding:10px 0}.quiz-question{font-size:22px;font-weight:750;line-height:1.55;margin:20px 0}.quiz-options{display:grid;gap:9px}.quiz-option{border:1px solid var(--line);background:#fff;border-radius:13px;padding:13px 14px;text-align:left;line-height:1.5}.quiz-option.selected{border-color:var(--accent);background:#edf2e9}.quiz-feedback{padding:13px;border-radius:12px;margin-top:12px;font-size:14px;line-height:1.6;background:#f0eee7}.quiz-actions{display:flex;gap:9px;margin-top:14px}.quiz-actions .btn{flex:1}.badge-done{display:inline-flex;align-items:center;gap:5px;color:#2e653c;background:#e3eddf;padding:5px 9px;border-radius:99px;font-size:11px;font-weight:800}.card-done{position:absolute;top:14px;right:14px;z-index:2}.type-test-result{margin-top:14px;padding:12px 14px;border-radius:14px;background:#e3eddf;color:#2e653c;font-weight:750}.type-test-result.wrong{background:#f7e7df;color:#8b4430}.type-test-expected{margin-top:10px;padding:12px;border:1px solid var(--line);border-radius:12px;line-height:1.7;white-space:pre-wrap}.card.is-mastered{border:3px solid #3f7550;background:#d7ead8;box-shadow:0 14px 40px rgba(48,90,55,.18),inset 0 0 0 4px rgba(255,255,255,.42)}.card.is-mastered::before,.card.is-mastered::after{border-color:rgba(48,100,60,.22)}.card.is-mastered .side-label{color:#285b36}.card.is-mastered .card-text{color:#204b2c}.card.is-mastered .hint{color:#3f7550}.card.is-mastered .card-done{background:#2f6b42;color:#fff;padding:7px 12px;font-size:12px;box-shadow:0 3px 10px rgba(30,70,40,.16)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;min-height:100dvh}button,input,textarea{font:inherit}button{cursor:pointer}.app{max-width:760px;margin:0 auto;padding:22px 18px calc(30px + env(safe-area-inset-bottom))}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}.brand{font-size:13px;letter-spacing:.12em;color:var(--accent);font-weight:800}h1{font-size:25px;line-height:1.25;margin:5px 0 0;letter-spacing:-.04em}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:12px;color:var(--muted);background:rgba(255,253,248,.65)}.progress-wrap{height:5px;background:#e7e1d6;border-radius:20px;overflow:hidden;margin:0 0 10px}.progress{height:100%;width:0;background:var(--accent);transition:width .2s}.meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);margin-bottom:18px}.card{position:relative;width:100%;min-height:340px;border:1px solid var(--line);border-radius:28px;background:var(--paper);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;text-align:center;padding:34px 24px;overflow:hidden;transition:background .2s}.card:focus-visible{outline:3px solid #8ba68b;outline-offset:3px}.card::before{content:"";position:absolute;width:180px;height:180px;border:1px solid #eeeadf;border-radius:50%;top:-95px;right:-75px}.card::after{content:"";position:absolute;width:130px;height:130px;border:1px solid #eeeadf;border-radius:50%;bottom:-80px;left:-45px}.card-inner{position:relative;z-index:1;width:100%}.side-label{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--accent);margin-bottom:20px}.card-text{font-size:clamp(23px,5.5vw,34px);font-weight:650;line-height:1.65;letter-spacing:-.04em;white-space:pre-wrap;overflow-wrap:anywhere}.card-text.ref{font-size:clamp(27px,6vw,38px);letter-spacing:-.045em}.hint{font-size:12px;color:#96968b;margin-top:24px}.controls{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:10px;margin:17px 0 12px}.btn{border:1px solid var(--line);border-radius:15px;padding:13px 10px;background:var(--paper);color:var(--ink);font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:white}.btn:active{transform:scale(.985)}.btn:disabled{opacity:.35;cursor:not-allowed}.secondary{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}.secondary .btn{flex:1;min-width:120px;font-size:13px;padding:11px}.statusline{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;background:#e8ede3;border:1px solid #d8e1d2;border-radius:14px;padding:11px 13px;margin-top:12px;font-size:13px}.statusline button{border:0;background:transparent;color:var(--accent);font-weight:800;padding:4px}.statusline .done{color:#2e653c}.settings{background:rgba(255,253,248,.72);border:1px solid var(--line);border-radius:18px;padding:14px 15px;margin-top:18px}.settings summary{font-weight:750;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}.settings summary::after{content:"＋";color:var(--accent)}.settings[open] summary::after{content:"−"}.settings-body{padding-top:15px}.setting-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 0;font-size:14px}select{border:1px solid var(--line);background:white;border-radius:10px;padding:9px;max-width:58%}.note{font-size:12px;line-height:1.65;color:var(--muted);margin:12px 0 0}footer{text-align:center;font-size:11px;color:#929287;margin-top:22px}.overlay{position:fixed;inset:0;background:rgba(25,28,24,.48);display:none;align-items:flex-end;justify-content:center;padding:12px;z-index:5}.overlay.show{display:flex}.modal{width:min(100%,620px);max-height:90dvh;overflow:auto;background:var(--paper);border-radius:24px;padding:22px;box-shadow:0 20px 70px #0002}.modal-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.modal h2{font-size:20px;margin:0 0 6px}.close{border:0;background:#eeeae0;border-radius:50%;width:36px;height:36px;font-size:20px}.modal p{font-size:13px;color:var(--muted);line-height:1.6}textarea{width:100%;min-height:140px;resize:vertical;border:1px solid var(--line);border-radius:14px;padding:13px;background:white;line-height:1.7;outline-color:var(--accent)}.modal-actions{display:flex;gap:9px;margin-top:12px}.modal-actions .btn{flex:1}.small-link{border:0;background:transparent;color:var(--accent);text-decoration:underline;font-size:13px;padding:10px 0}.quiz-question{font-size:22px;font-weight:750;line-height:1.55;margin:20px 0}.quiz-options{display:grid;gap:9px}.quiz-option{border:1px solid var(--line);background:#fff;border-radius:13px;padding:13px 14px;text-align:left;line-height:1.5}.quiz-option.selected{border-color:var(--accent);background:#edf2e9}.quiz-feedback{padding:13px;border-radius:12px;margin-top:12px;font-size:14px;line-height:1.6;background:#f0eee7}.quiz-actions{display:flex;gap:9px;margin-top:14px}.quiz-actions .btn{flex:1}.badge-done{display:inline-flex;align-items:center;gap:5px;color:#2e653c;background:#e3eddf;padding:5px 9px;border-radius:99px;font-size:11px;font-weight:800}.card-done{position:absolute;top:14px;right:14px;z-index:2}.type-test-result{margin-top:14px;padding:12px 14px;border-radius:14px;background:#e3eddf;color:#2e653c;font-weight:750}.type-test-result.wrong{background:#f7e7df;color:#8b4430}.type-test-expected{margin-top:10px;padding:12px;border:1px solid var(--line);border-radius:12px;line-height:1.7;white-space:pre-wrap}.card.is-mastered{border:3px solid #3f7550;background:#d7ead8;box-shadow:0 14px 40px rgba(48,90,55,.18),inset 0 0 0 4px rgba(255,255,255,.42)}.card.is-mastered::before,.card.is-mastered::after{border-color:rgba(48,100,60,.22)}.card.is-mastered .side-label{color:#285b36}.card.is-mastered .card-text{color:#204b2c}.card.is-mastered .hint{color:#3f7550}.card.is-mastered .card-done{background:#2f6b42;color:#fff;padding:7px 12px;font-size:12px;box-shadow:0 3px 10px rgba(30,70,40,.16)}
+.mic-btn{background:#e8ede3;border:1px solid #d8e1d2;border-radius:12px;padding:10px 14px;font-size:13px;font-weight:700;color:var(--accent);display:flex;align-items:center;justify-content:center;gap:6px;width:100%;margin-top:8px}.mic-btn.recording{background:#f7e7df;color:#8b4430;border-color:#e8c2b5;animation:pulse 1.5s infinite}@keyframes pulse{0%{opacity:1}50%{opacity:.6}100%{opacity:1}}
 @media(min-width:600px){.app{padding-top:32px}.card{min-height:390px}.overlay{align-items:center}}
 </style>
 </head>
@@ -31,8 +32,9 @@
 
 <div class="overlay" id="typeTestOverlay" role="dialog" aria-modal="true" aria-labelledby="typeTestTitle"><div class="modal">
 <div class="modal-head"><div><h2 id="typeTestTitle">직접 입력 암기 테스트</h2><div class="pill" id="typeTestRef"></div></div><button class="close" id="closeTypeTest" aria-label="닫기">×</button></div>
-<p>외운 본문을 직접 입력한 뒤 확인해 보세요. 틀린 글자는 아래에 빨간색으로 표시됩니다.</p>
-<textarea id="typeTestInput" placeholder="외운 성경 본문을 입력하세요."></textarea>
+<p>외운 본문을 직접 입력하거나 음성으로 말해서 테스트해 보세요. 틀린 글자는 아래에 빨간색으로 표시됩니다.</p>
+<textarea id="typeTestInput" placeholder="외운 성경 본문을 직접 입력하거나 아래 음성 입력 버튼을 누르세요."></textarea>
+<button class="mic-btn" id="micBtn" type="button">🎤 음성으로 입력하기 (말하기)</button>
 <div class="modal-actions"><button class="btn" id="clearTypeTest">다시 입력</button><button class="btn primary" id="checkTypeTest">정답 확인</button></div>
 <div id="typeTestResult" class="type-test-result" hidden></div>
 <div id="typeTestExpected" class="type-test-expected" hidden></div>
@@ -89,7 +91,7 @@ const texts = {
   34: "이와 같이 성령도 우리의 연약함을 도우시나니 우리는 마땅히 기도할 바를 알지 못하나 오직 성령이 말할 수 없는 탄식으로 우리를 위하여 친히 간구하시느니라",
   35: "19 너희 몸은 너희가 하나님께로부터 받은 바 너희 가운데 계신 성령의 전인 줄을 알지 못하느냐 너희는 너희 자신의 것이 아니라\n20 값으로 산 것이 되었으니 그런즉 너희 몸으로 하나님께 영광을 돌리라",
   36: "주 예수 그리스도의 은혜와 하나님의 사랑과 성령의 교통하심이 너희 무리와 함께 있을지어다",
-  37: "내가 그리스도와 함께 십자가에 못 박혔나니 그런즉 이제는 내가 사는 것이 아니요 오직 내 안에 그리스도께서 사시는 것이라 이제 내가 육체 가운데 사는 것은 나를 사랑하사 나를 위하여 자기 자신을 버리신 하나님의 아들을 믿는 믿음 안에서 사는 것이라",
+  37: "내가 그리스도과 함께 십자가에 못 박혔나니 그런즉 이제는 내가 사는 것이 아니요 오직 내 안에 그리스도께서 사시는 것이라 이제 내가 육체 가운데 사는 것은 나를 사랑하사 나를 위하여 자기 자신을 버리신 하나님의 아들을 믿는 믿음 안에서 사는 것이라",
   38: "11 그가 어떤 사람은 사도로, 어떤 사람은 선지자로, 어떤 사람은 복음 전하는 자로, 어떤 사람은 목사와 교사로 삼으셨으니\n12 이는 성도를 온전하게 하여 봉사의 일을 하게 하며 그리스도의 몸을 세우려 하심이라",
   39: "6 그는 근본 하나님의 본체시나 하나님과 동등됨을 취할 것으로 여기지 아니하시고\n7 오히려 자기를 비워 종의 형체를 가지사 사람들과 같이 되셨고",
   40: "그러므로 너희가 그리스도와 함께 다시 살리심을 받았으면 위의 것을 찾으라 거기는 그리스도께서 하나님 우편에 앉아 계시느니라",
@@ -104,7 +106,7 @@ const texts = {
   49: "12 보라 내가 속히 오리니 내가 줄 상이 내게 있어 각 사람에게 그가 행한 대로 갚아 주리라\n13 나는 알파와 오메가요 처음과 마지막이요 시작과 마침이라"
 };
 
-const STORAGE_KEY="word-memory-verses-v3";
+const STORAGE_KEY="word-memory-verses-v4";
 let saved={mastered:[], lastPos:0};
 try{
   const raw=JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}");
@@ -114,6 +116,7 @@ try{
 
 let mastered = new Set(saved.mastered);
 let onlyMasteredFilter = false;
+let isShuffled = false;
 let order = refs.map((_,i)=>i);
 let pos = Math.min(Math.max(0, saved.lastPos), refs.length - 1);
 let showingVerse=false;
@@ -171,6 +174,7 @@ function render(){
   $("toggleMastery").textContent=done?"↶ 완료 표시 취소":"✓ 암기 완료 표시";
   $("toggleMastery").classList.toggle("done",done);
   $("toggleFilter").textContent=onlyMasteredFilter?"전체 보기":"외운 것만 보기";
+  $("shuffle").textContent = isShuffled ? "원래 순서로" : "순서 섞기";
   persist();
 }
 
@@ -209,6 +213,46 @@ $("typeTestOpen").addEventListener("click",openTypeTest);
 $("closeTypeTest").addEventListener("click",closeTypeTest);
 $("typeTestOverlay").addEventListener("click",e=>{if(e.target===$("typeTestOverlay"))closeTypeTest()});
 $("clearTypeTest").addEventListener("click",()=>{$("typeTestInput").value="";$("typeTestResult").hidden=true;$("typeTestExpected").hidden=true;$("typeTestInput").focus()});
+
+// 음성 인식 (Speech Recognition) 기능 추가
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+if(SpeechRecognition){
+  const recognition = new SpeechRecognition();
+  recognition.lang = 'ko-KR';
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  $("micBtn").addEventListener("click",()=>{
+    try {
+      recognition.start();
+      $("micBtn").classList.add("recording");
+      $("micBtn").textContent = "🎙️ 듣고 있어요... 말씀해 주세요!";
+    } catch(e) {
+      recognition.stop();
+    }
+  });
+
+  recognition.onresult = (event) => {
+    const speechResult = event.results[0][0].transcript;
+    const currentText = $("typeTestInput").value;
+    $("typeTestInput").value = currentText ? currentText + " " + speechResult : speechResult;
+    $("micBtn").classList.remove("recording");
+    $("micBtn").textContent = "🎤 음성으로 입력하기 (말하기)";
+  };
+
+  recognition.onerror = () => {
+    $("micBtn").classList.remove("recording");
+    $("micBtn").textContent = "🎤 음성으로 입력하기 (말하기)";
+    alert("음성 인식을 실패했거나 권한이 차단되었습니다.");
+  };
+
+  recognition.onend = () => {
+    $("micBtn").classList.remove("recording");
+    $("micBtn").textContent = "🎤 음성으로 입력하기 (말하기)";
+  };
+} else {
+  $("micBtn").style.display = "none"; // 브라우저가 지원하지 않을 경우 숨김
+}
 
 $("checkTypeTest").addEventListener("click",()=>{
   const idx=currentIndex(),expected=(texts[idx]||"").trim(),typed=$("typeTestInput").value.trim();
@@ -252,10 +296,17 @@ $("toggleFilter").addEventListener("click",()=>{
   render();
 });
 
+// 순서 섞기 및 원래 순서로 되돌리기 토글 기능
 $("shuffle").addEventListener("click",()=>{
-  for(let i=order.length-1;i>0;i--){
-    const j=Math.floor(Math.random()*(i+1));
-    [order[i],order[j]]=[order[j],order[i]];
+  if(!isShuffled){
+    for(let i=order.length-1;i>0;i--){
+      const j=Math.floor(Math.random()*(i+1));
+      [order[i],order[j]]=[order[j],order[i]];
+    }
+    isShuffled = true;
+  } else {
+    order = refs.map((_,i)=>i);
+    isShuffled = false;
   }
   pos=0;
   showingVerse=$("startSide").value==="verse";
@@ -279,7 +330,7 @@ $("jump").addEventListener("change",e=>{
   render();
 });
 
-$("export").addEventListener("click",()=>{const data={app:"말씀 한 장",version:3,mastered:[...mastered]};const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="말씀-암기-학습기록.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
+$("export").addEventListener("click",()=>{const data={app:"말씀 한 장",version:4,mastered:[...mastered]};const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="말씀-암기-학습기록.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
 $("importBtn").addEventListener("click",()=>$("importFile").click());
 $("importFile").addEventListener("change",async e=>{const f=e.target.files[0];if(!f)return;try{const data=JSON.parse(await f.text());if(Array.isArray(data.mastered)){mastered=new Set(data.mastered);persist();render();alert("학습 기록을 불러왔어요.")}else{throw Error()}}catch(err){alert("백업 파일을 읽지 못했어요.")}e.target.value=""});
 
