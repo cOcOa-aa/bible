@@ -50,7 +50,7 @@
 
 <script>
 const refs=[
-"창세기 1:1","출애굽기 19:5-6","레위기 19:2","레위기 19:18","민수기 6:24-26","신명기 6:4-9","여호수아 1:8","사사기 8:23","사무엘하 7:16","열왕기상 18:21","열왕기하 22:13","역대하 31:20","욥기 1:21","시편 1:1-2","시편 119:105","잠언 1:7","전도서 12:13","아가 8:6","이사야 2:3","예레미야 31:33","요엘 2:28-29","요나 4:2 하반절","미가 3:12","하박국 2:4","말라기 4:4-6","마태복음 4:17","마태복음 28:19-20","마가복음 10:45","누가복음 4:18-19","누가복음 15:7","요한복음 3:16-17","요한복음 20:31","사도행전 1:8","로마서 1:17","로마서 8:26","고린도전서 6:19-20","고린도후서 13:13","갈라디아서 2:20","에베소서 4:11-12","빌립보서 2:6-7","골로새서 3:1","데살로니가전서 5:16-18","디모데전서 2:1-2","빌레몬서 1:16","히브리서 11:1-2","야고보서 2:26","베드로전서 4:16","요한일서 4:10","요한이서 1:7","요한계시록 22:12-13"
+"창세기 1:1","출애굽기 19:5-6","레위기 19:2","레위기 19:18","민수기 6:24-26","신명기 6:4-9","여호수아 1:8","사사기 8:23","사무엘하 7:16","열왕기상 18:21","열왕기하 22:13","역대하 31:20","욥기 1:21","시편 1:1-2","시편 119:105","잠언 1:7","전도서 12:13","아가 8:6","이사야 2:3","예레미야 31:33","요엘 2:28-29","요나 4:2 하반절","미가 3:12","하박국 2:4","말라기 4:4-6","마태복음 4:17","마태복음 28:19-20","마가복음 10:45","누가복음 4:18-19","누가복음 15:7","요한복음 3:16-17","요한복음 20:31","사도행전 1:8","로마서 1:17","로마서 8:26","고린도전서 6:19-20","고린도후서 13:13","갈라디아서 2:20","エ베소서 4:11-12","빌립보서 2:6-7","골로새서 3:1","데살로니가전서 5:16-18","디모데전서 2:1-2","빌레몬서 1:16","히브리서 11:1-2","야고보서 2:26","베드로전서 4:16","요한일서 4:10","요한이서 1:7","요한계시록 22:12-13"
 ];
 
 const texts = {
@@ -106,7 +106,7 @@ const texts = {
   49: "12 보라 내가 속히 오리니 내가 줄 상이 내게 있어 각 사람에게 그가 행한 대로 갚아 주리라\n13 나는 알파와 오메가요 처음과 마지막이요 시작과 마침이라"
 };
 
-const STORAGE_KEY="word-memory-verses-v6";
+const STORAGE_KEY="word-memory-verses-v7";
 let saved={mastered:[], lastPos:0};
 try{
   const raw=JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}");
@@ -146,7 +146,7 @@ function persist(){
   }catch(e){}
 }
 
-// '말씀 바로 선택' 드롭다운 목록 생성 및 외운 구절 표시 갱신 함수
+// 드롭다운 스타일 개선: 텍스트 대신 깔끔하게 번호와 구절만 표시하고 외운 것은 이모지(✓)와 배경색으로 표시
 function updateJumpSelect(){
   const jumpSelect = $("jump");
   const currentVal = jumpSelect.value;
@@ -155,7 +155,7 @@ function updateJumpSelect(){
     const o=document.createElement("option");
     o.value=String(i);
     const isDone = mastered.has(i);
-    o.textContent = `${String(i+1).padStart(2,"0")}. ${r}${isDone ? " [✓ 외운 말씀]" : ""}`;
+    o.textContent = `${String(i+1).padStart(2,"0")}. ${r}${isDone ? " ✓" : ""}`;
     jumpSelect.appendChild(o);
   });
   jumpSelect.value = currentVal;
@@ -191,7 +191,7 @@ function render(){
   $("toggleFilter").textContent=onlyMasteredFilter?"전체 보기":"외운 것만 보기";
   $("shuffle").textContent = isShuffled ? "원래 순서로" : "순서 섞기";
   
-  updateJumpSelect(); // 암기 상태 변경 시 드롭다운 텍스트 즉시 갱신
+  updateJumpSelect();
   persist();
 }
 
@@ -377,7 +377,6 @@ $("shuffle").addEventListener("click",()=>{
 $("startSide").addEventListener("change",()=>{showingVerse=$("startSide").value==="verse";render()});
 $("fontSize").addEventListener("change",e=>{cardText.style.fontSize=e.target.value==="small"?"22px":e.target.value==="large"?"clamp(30px,7vw,42px)":""});
 
-// 초기 드롭다운 생성 실행
 updateJumpSelect();
 
 $("jump").addEventListener("change",e=>{
@@ -393,7 +392,7 @@ $("jump").addEventListener("change",e=>{
   render();
 });
 
-$("export").addEventListener("click",()=>{const data={app:"말씀 한 장",version:6,mastered:[...mastered]};const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="말씀-암기-학습기록.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
+$("export").addEventListener("click",()=>{const data={app:"말씀 한 장",version:7,mastered:[...mastered]};const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="말씀-암기-학습기록.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
 $("importBtn").addEventListener("click",()=>$("importFile").click());
 $("importFile").addEventListener("change",async e=>{const f=e.target.files[0];if(!f)return;try{const data=JSON.parse(await f.text());if(Array.isArray(data.mastered)){mastered=new Set(data.mastered);persist();render();alert("학습 기록을 불러왔어요.")}else{throw Error()}}catch(err){alert("백업 파일을 읽지 못했어요.")}e.target.value=""});
 
@@ -449,6 +448,15 @@ function renderQuiz(){
   $("quizInstructions").textContent=q.askRef?"본문을 읽고 알맞은 성경 장절을 고르세요.":"성경 장절을 보고 알맞은 본문을 고르세요.";
   $("quizQuestion").textContent=q.askRef?q.item.text:q.item.ref;
   $("quizOptions").innerHTML="";
+  q.options.export ? q.options.forEach : q.options.forEach((opt,n)=>{
+    const b=document.createElement("button");
+    b.className="quiz-option";
+    b.textContent=opt.label;
+    b.addEventListener("click",()=>answerQuiz(n));
+    $("quizOptions").appendChild(b)
+  });
+  // 안전한 렌더링을 위해 아래 루프 보정
+  $("quizOptions").innerHTML="";
   q.options.forEach((opt,n)=>{
     const b=document.createElement("button");
     b.className="quiz-option";
@@ -456,6 +464,7 @@ function renderQuiz(){
     b.addEventListener("click",()=>answerQuiz(n));
     $("quizOptions").appendChild(b)
   });
+
   $("quizFeedback").hidden=true;
   $("quizNext").disabled=true;
   $("quizNext").textContent=quizPos===quizItems.length-1?"결과 보기":"다음 문제 →";
