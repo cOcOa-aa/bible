@@ -7,8 +7,17 @@
 <title>말씀 한 장 — 성경 암기</title>
 <style>
 :root{--bg:#f5f1e8;--paper:#fffdf8;--ink:#282b27;--muted:#77796f;--line:#e4dfd3;--accent:#516b55;--accent2:#dce6d8;--shadow:0 14px 40px rgba(48,50,40,.09)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;min-height:100dvh}button,input,textarea{font:inherit}button{cursor:pointer}.app{max-width:760px;margin:0 auto;padding:22px 18px calc(30px + env(safe-area-inset-bottom))}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}.brand{font-size:13px;letter-spacing:.12em;color:var(--accent);font-weight:800}h1{font-size:25px;line-height:1.25;margin:5px 0 0;letter-spacing:-.04em}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:12px;color:var(--muted);background:rgba(255,253,248,.65)}.progress-wrap{height:5px;background:#e7e1d6;border-radius:20px;overflow:hidden;margin:0 0 10px}.progress{height:100%;width:0;background:var(--accent);transition:width .2s}.meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);margin-bottom:18px}.card{position:relative;width:100%;min-height:340px;border:1px solid var(--line);border-radius:28px;background:var(--paper);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;text-align:center;padding:34px 24px;overflow:hidden;transition:background .2s}.card:focus-visible{outline:3px solid #8ba68b;outline-offset:3px}.card::before{content:"";position:absolute;width:180px;height:180px;border:1px solid #eeeadf;border-radius:50%;top:-95px;right:-75px}.card::after{content:"";position:absolute;width:130px;height:130px;border:1px solid #eeeadf;border-radius:50%;bottom:-80px;left:-45px}.card-inner{position:relative;z-index:1;width:100%}.side-label{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--accent);margin-bottom:20px}.card-text{font-size:clamp(23px,5.5vw,34px);font-weight:650;line-height:1.65;letter-spacing:-.04em;white-space:pre-wrap;overflow-wrap:anywhere}.card-text.ref{font-size:clamp(27px,6vw,38px);letter-spacing:-.045em}.hint{font-size:12px;color:#96968b;margin-top:24px}.controls{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:10px;margin:17px 0 12px}.btn{border:1px solid var(--line);border-radius:15px;padding:13px 10px;background:var(--paper);color:var(--ink);font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:white}.btn:active{transform:scale(.985)}.btn:disabled{opacity:.35;cursor:not-allowed}.secondary{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}.secondary .btn{flex:1;min-width:120px;font-size:13px;padding:11px}.statusline{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;background:#e8ede3;border:1px solid #d8e1d2;border-radius:14px;padding:11px 13px;margin-top:12px;font-size:13px}.statusline button{border:0;background:transparent;color:var(--accent);font-weight:800;padding:4px}.statusline .done{color:#2e653c}.settings{background:rgba(255,253,248,.72);border:1px solid var(--line);border-radius:18px;padding:14px 15px;margin-top:18px}.settings summary{font-weight:750;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}.settings summary::after{content:"＋";color:var(--accent)}.settings[open] summary::after{content:"−"}.settings-body{padding-top:15px}.setting-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 0;font-size:14px}select{border:1px solid var(--line);background:white;border-radius:10px;padding:9px;max-width:58%}.note{font-size:12px;line-height:1.65;color:var(--muted);margin:12px 0 0}footer{text-align:center;font-size:11px;color:#929287;margin-top:22px}.overlay{position:fixed;inset:0;background:rgba(25,28,24,.48);display:none;align-items:flex-end;justify-content:center;padding:12px;z-index:5}.overlay.show{display:flex}.modal{width:min(100%,620px);max-height:90dvh;overflow:auto;background:var(--paper);border-radius:24px;padding:22px;box-shadow:0 20px 70px #0002}.modal-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.modal h2{font-size:20px;margin:0 0 6px}.close{border:0;background:#eeeae0;border-radius:50%;width:36px;height:36px;font-size:20px}.modal p{font-size:13px;color:var(--muted);line-height:1.6}textarea{width:100%;min-height:140px;resize:vertical;border:1px solid var(--line);border-radius:14px;padding:13px;background:white;line-height:1.7;outline-color:var(--accent)}.modal-actions{display:flex;gap:9px;margin-top:12px}.modal-actions .btn{flex:1}.small-link{border:0;background:transparent;color:var(--accent);text-decoration:underline;font-size:13px;padding:10px 0}.quiz-question{font-size:22px;font-weight:750;line-height:1.55;margin:20px 0}.quiz-options{display:grid;gap:9px}.quiz-option{border:1px solid var(--line);background:#fff;border-radius:13px;padding:13px 14px;text-align:left;line-height:1.5}.quiz-option.selected{border-color:var(--accent);background:#edf2e9}.quiz-feedback{padding:13px;border-radius:12px;margin-top:12px;font-size:14px;line-height:1.6;background:#f0eee7}.quiz-actions{display:flex;gap:9px;margin-top:14px}.quiz-actions .btn{flex:1}.badge-done{display:inline-flex;align-items:center;gap:5px;color:#2e653c;background:#e3eddf;padding:5px 9px;border-radius:99px;font-size:11px;font-weight:800}.card-done{position:absolute;top:14px;right:14px;z-index:2}.type-test-result{margin-top:14px;padding:12px 14px;border-radius:14px;background:#e3eddf;color:#2e653c;font-weight:750;word-break:break-all}.type-test-result.wrong{background:#f7e7df;color:#8b4430}.type-test-expected{margin-top:10px;padding:12px;border:1px solid var(--line);border-radius:12px;line-height:1.7;white-space:pre-wrap}.card.is-mastered{border:3px solid #3f7550;background:#d7ead8;box-shadow:0 14px 40px rgba(48,90,55,.18),inset 0 0 0 4px rgba(255,255,255,.42)}.card.is-mastered::before,.card.is-mastered::after{border-color:rgba(48,100,60,.22)}.card.is-mastered .side-label{color:#285b36}.card.is-mastered .card-text{color:#204b2c}.card.is-mastered .hint{color:#3f7550}.card.is-mastered .card-done{background:#2f6b42;color:#fff;padding:7px 12px;font-size:12px;box-shadow:0 3px 10px rgba(30,70,40,.16)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;min-height:100dvh}button,input,textarea{font:inherit}button{cursor:pointer}.app{max-width:760px;margin:0 auto;padding:22px 18px calc(30px + env(safe-area-inset-bottom))}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}.brand{font-size:13px;letter-spacing:.12em;color:var(--accent);font-weight:800}h1{font-size:25px;line-height:1.25;margin:5px 0 0;letter-spacing:-.04em}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:12px;color:var(--muted);background:rgba(255,253,248,.65)}.progress-wrap{height:5px;background:#e7e1d6;border-radius:20px;overflow:hidden;margin:0 0 10px}.progress{height:100%;width:0;background:var(--accent);transition:width .2s}.meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);margin-bottom:18px}.card{position:relative;width:100%;min-height:340px;border:1px solid var(--line);border-radius:28px;background:var(--paper);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;text-align:center;padding:34px 24px;overflow:hidden;transition:background .2s}.card:focus-visible{outline:3px solid #8ba68b;outline-offset:3px}.card::before{content:"";position:absolute;width:180px;height:180px;border:1px solid #eeeadf;border-radius:50%;top:-95px;right:-75px}.card::after{content:"";position:absolute;width:130px;height:130px;border:1px solid #eeeadf;border-radius:50%;bottom:-80px;left:-45px}.card-inner{position:relative;z-index:1;width:100%}.side-label{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--accent);margin-bottom:20px}.card-text{font-size:clamp(23px,5.5vw,34px);font-weight:650;line-height:1.65;letter-spacing:-.04em;white-space:pre-wrap;overflow-wrap:anywhere}.card-text.ref{font-size:clamp(27px,6vw,38px);letter-spacing:-.045em}.hint{font-size:12px;color:#96968b;margin-top:24px}.controls{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:10px;margin:17px 0 12px}.btn{border:1px solid var(--line);border-radius:15px;padding:13px 10px;background:var(--paper);color:var(--ink);font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:white}.btn:active{transform:scale(.985)}.btn:disabled{opacity:.35;cursor:not-allowed}.secondary{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}.secondary .btn{flex:1;min-width:120px;font-size:13px;padding:11px}.statusline{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;background:#e8ede3;border:1px solid #d8e1d2;border-radius:14px;padding:11px 13px;margin-top:12px;font-size:13px}.statusline button{border:0;background:transparent;color:var(--accent);font-weight:800;padding:4px}.statusline .done{color:#2e653c}.settings{background:rgba(255,253,248,.72);border:1px solid var(--line);border-radius:18px;padding:14px 15px;margin-top:18px}.settings summary{font-weight:750;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}.settings summary::after{content:"＋";color:var(--accent)}.settings[open] summary::after{content:"−"}.settings-body{padding-top:15px}.setting-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 0;font-size:14px}select,.btn-select{border:1px solid var(--line);background:white;border-radius:10px;padding:9px;max-width:58%}.btn-select{text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:var(--paper);font-weight:600;color:var(--accent)}.note{font-size:12px;line-height:1.65;color:var(--muted);margin:12px 0 0}footer{text-align:center;font-size:11px;color:#929287;margin-top:22px}.overlay{position:fixed;inset:0;background:rgba(25,28,24,.48);display:none;align-items:flex-end;justify-content:center;padding:12px;z-index:5}.overlay.show{display:flex}.modal{width:min(100%,620px);max-height:90dvh;overflow:auto;background:var(--paper);border-radius:24px;padding:22px;box-shadow:0 20px 70px #0002}.modal-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.modal h2{font-size:20px;margin:0 0 6px}.close{border:0;background:#eeeae0;border-radius:50%;width:36px;height:36px;font-size:20px}.modal p{font-size:13px;color:var(--muted);line-height:1.6}textarea{width:100%;min-height:140px;resize:vertical;border:1px solid var(--line);border-radius:14px;padding:13px;background:white;line-height:1.7;outline-color:var(--accent)}.modal-actions{display:flex;gap:9px;margin-top:12px}.modal-actions .btn{flex:1}.small-link{border:0;background:transparent;color:var(--accent);text-decoration:underline;font-size:13px;padding:10px 0}.quiz-question{font-size:22px;font-weight:750;line-height:1.55;margin:20px 0}.quiz-options{display:grid;gap:9px}.quiz-option{border:1px solid var(--line);background:#fff;border-radius:13px;padding:13px 14px;text-align:left;line-height:1.5}.quiz-option.selected{border-color:var(--accent);background:#edf2e9}.quiz-feedback{padding:13px;border-radius:12px;margin-top:12px;font-size:14px;line-height:1.6;background:#f0eee7}.quiz-actions{display:flex;gap:9px;margin-top:14px}.quiz-actions .btn{flex:1}.badge-done{display:inline-flex;align-items:center;gap:5px;color:#2e653c;background:#e3eddf;padding:5px 9px;border-radius:99px;font-size:11px;font-weight:800}.card-done{position:absolute;top:14px;right:14px;z-index:2}.type-test-result{margin-top:14px;padding:12px 14px;border-radius:14px;background:#e3eddf;color:#2e653c;font-weight:750;word-break:break-all}.type-test-result.wrong{background:#f7e7df;color:#8b4430}.type-test-expected{margin-top:10px;padding:12px;border:1px solid var(--line);border-radius:12px;line-height:1.7;white-space:pre-wrap}.card.is-mastered{border:3px solid #3f7550;background:#d7ead8;box-shadow:0 14px 40px rgba(48,90,55,.18),inset 0 0 0 4px rgba(255,255,255,.42)}.card.is-mastered::before,.card.is-mastered::after{border-color:rgba(48,100,60,.22)}.card.is-mastered .side-label{color:#285b36}.card.is-mastered .card-text{color:#204b2c}.card.is-mastered .hint{color:#3f7550}.card.is-mastered .card-done{background:#2f6b42;color:#fff;padding:7px 12px;font-size:12px;box-shadow:0 3px 10px rgba(30,70,40,.16)}
 .mic-btn{background:#e8ede3;border:1px solid #d8e1d2;border-radius:12px;padding:10px 14px;font-size:13px;font-weight:700;color:var(--accent);display:flex;align-items:center;justify-content:center;gap:6px;width:100%;margin-top:8px}.mic-btn.recording{background:#f7e7df;color:#8b4430;border-color:#e8c2b5;animation:pulse 1.5s infinite}@keyframes pulse{0%{opacity:1}50%{opacity:.6}100%{opacity:1}}
+
+/* 세련된 카드형 말씀 선택 모달 스타일 */
+.jump-list{display:grid;gap:10px;margin-top:16px;max-height:65dvh;overflow-y:auto;padding-right:4px}
+.jump-item{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:#fff;border:1px solid var(--line);border-radius:16px;font-size:15px;font-weight:600;text-align:left;transition:all .15s}
+.jump-item:active{transform:scale(.98)}
+.jump-item.is-mastered{background:#dceddc;border-color:#a8cca5;color:#183820}
+.jump-item.is-active{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+.jump-item .done-badge{font-size:12px;background:#2e653c;color:#fff;padding:4px 10px;border-radius:99px;font-weight:700}
+
 @media(min-width:600px){.app{padding-top:32px}.card{min-height:390px}.overlay{align-items:center}}
 </style>
 </head>
@@ -24,11 +33,17 @@
 <details class="settings"><summary>암기 설정</summary><div class="settings-body">
 <div class="setting-row"><label for="startSide">처음 보여줄 면</label><select id="startSide"><option value="ref">말씀(장절)</option><option value="verse">구절(본문)</option></select></div>
 <div class="setting-row"><label for="fontSize">글자 크기</label><select id="fontSize"><option value="small">작게</option><option value="medium" selected>보통</option><option value="large">크게</option></select></div>
-<div class="setting-row"><label for="jump">말씀 바로 선택</label><select id="jump"></select></div>
+<div class="setting-row"><span>말씀 바로 선택</span><button class="btn-select" id="jumpOpenBtn">01. 창세기 1:1 ▾</button></div>
 <p class="note">암기 완료 상태와 학습 기록은 이 기기에 보관됩니다.</p><button class="small-link" id="export">학습 내용 백업하기</button><button class="small-link" id="importBtn">백업 불러오기</button><input type="file" id="importFile" accept="application/json,.json" hidden>
 </div></details>
 <footer>천천히 읽고, 기억하고, 마음에 새겨 보세요.</footer>
 </main>
+
+<!-- 말씀 바로 이동 커스텀 모달 -->
+<div class="overlay" id="jumpOverlay" role="dialog" aria-modal="true" aria-labelledby="jumpTitle"><div class="modal">
+<div class="modal-head"><div><h2 id="jumpTitle">말씀 선택하기</h2><p>이동하고 싶은 구절을 선택하세요. 외운 말씀은 색상으로 표시됩니다.</p></div><button class="close" id="closeJump" aria-label="닫기">×</button></div>
+<div class="jump-list" id="jumpList"></div>
+</div></div>
 
 <div class="overlay" id="typeTestOverlay" role="dialog" aria-modal="true" aria-labelledby="typeTestTitle"><div class="modal">
 <div class="modal-head"><div><h2 id="typeTestTitle">직접 입력 암기 테스트</h2><div class="pill" id="typeTestRef"></div></div><button class="close" id="closeTypeTest" aria-label="닫기">×</button></div>
@@ -50,7 +65,7 @@
 
 <script>
 const refs=[
-"창세기 1:1","출애굽기 19:5-6","레위기 19:2","레위기 19:18","민수기 6:24-26","신명기 6:4-9","여호수아 1:8","사사기 8:23","사무엘하 7:16","열왕기상 18:21","열왕기하 22:13","역대하 31:20","욥기 1:21","시편 1:1-2","시편 119:105","잠언 1:7","전도서 12:13","아가 8:6","이사야 2:3","예레미야 31:33","요엘 2:28-29","요나 4:2 하반절","미가 3:12","하박국 2:4","말라기 4:4-6","마태복음 4:17","마태복음 28:19-20","마가복음 10:45","누가복음 4:18-19","누가복음 15:7","요한복음 3:16-17","요한복음 20:31","사도행전 1:8","로마서 1:17","로마서 8:26","고린도전서 6:19-20","고린도후서 13:13","갈라디아서 2:20","エ베소서 4:11-12","빌립보서 2:6-7","골로새서 3:1","데살로니가전서 5:16-18","디모데전서 2:1-2","빌레몬서 1:16","히브리서 11:1-2","야고보서 2:26","베드로전서 4:16","요한일서 4:10","요한이서 1:7","요한계시록 22:12-13"
+"창세기 1:1","출애굽기 19:5-6","레위기 19:2","레위기 19:18","민수기 6:24-26","신명기 6:4-9","여호수아 1:8","사사기 8:23","사무엘하 7:16","열왕기상 18:21","열왕기하 22:13","역대하 31:20","욥기 1:21","시편 1:1-2","시편 119:105","잠언 1:7","전도서 12:13","아가 8:6","이사야 2:3","예레미야 31:33","요엘 2:28-29","요나 4:2 하반절","미가 3:12","하박국 2:4","말라기 4:4-6","마태복음 4:17","마태복음 28:19-20","마가복음 10:45","누가복음 4:18-19","누가복음 15:7","요한복음 3:16-17","요한복음 20:31","사도행전 1:8","로마서 1:17","로마서 8:26","고린도전서 6:19-20","고린도후서 13:13","갈라디아서 2:20","에베소서 4:11-12","빌립보서 2:6-7","골로새서 3:1","데살로니가전서 5:16-18","디모데전서 2:1-2","빌레몬서 1:16","히브리서 11:1-2","야고보서 2:26","베드로전서 4:16","요한일서 4:10","요한이서 1:7","요한계시록 22:12-13"
 ];
 
 const texts = {
@@ -106,7 +121,7 @@ const texts = {
   49: "12 보라 내가 속히 오리니 내가 줄 상이 내게 있어 각 사람에게 그가 행한 대로 갚아 주리라\n13 나는 알파와 오메가요 처음과 마지막이요 시작과 마침이라"
 };
 
-const STORAGE_KEY="word-memory-verses-v7";
+const STORAGE_KEY="word-memory-verses-v9";
 let saved={mastered:[], lastPos:0};
 try{
   const raw=JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}");
@@ -146,21 +161,6 @@ function persist(){
   }catch(e){}
 }
 
-// 드롭다운 스타일 개선: 텍스트 대신 깔끔하게 번호와 구절만 표시하고 외운 것은 이모지(✓)와 배경색으로 표시
-function updateJumpSelect(){
-  const jumpSelect = $("jump");
-  const currentVal = jumpSelect.value;
-  jumpSelect.innerHTML = "";
-  refs.forEach((r,i)=>{
-    const o=document.createElement("option");
-    o.value=String(i);
-    const isDone = mastered.has(i);
-    o.textContent = `${String(i+1).padStart(2,"0")}. ${r}${isDone ? " ✓" : ""}`;
-    jumpSelect.appendChild(o);
-  });
-  jumpSelect.value = currentVal;
-}
-
 function render(){
   const active = getActiveIndices();
   if(pos >= active.length) pos = Math.max(0, active.length - 1);
@@ -182,7 +182,7 @@ function render(){
   $("progress").style.width=`${((pos+1)/active.length)*100}%`;
   $("prev").disabled=pos===0;
   $("next").disabled=pos===active.length-1;
-  $("jump").value=String(idx);
+  $("jumpOpenBtn").textContent=`${String(idx+1).padStart(2,"0")}. ${refs[idx]} ▾`;
   
   const done=mastered.has(idx);
   $("masteryStatus").innerHTML=done?'<span class="badge-done">✓ 암기 완료</span> 이 말씀은 외웠어요':'아직 암기 완료로 표시하지 않았어요';
@@ -191,7 +191,6 @@ function render(){
   $("toggleFilter").textContent=onlyMasteredFilter?"전체 보기":"외운 것만 보기";
   $("shuffle").textContent = isShuffled ? "원래 순서로" : "순서 섞기";
   
-  updateJumpSelect();
   persist();
 }
 
@@ -202,6 +201,48 @@ function move(d){
   showingVerse=$("startSide").value==="verse";
   render();
 }
+
+function openJumpModal(){
+  const listContainer = $("jumpList");
+  listContainer.innerHTML = "";
+  const currentIdx = currentIndex();
+
+  refs.forEach((r, i) => {
+    const isMastered = mastered.has(i);
+    const isActive = (i === currentIdx);
+    const btn = document.createElement("button");
+    btn.className = `jump-item ${isMastered ? 'is-mastered' : ''} ${isActive ? 'is-active' : ''}`;
+    btn.type = "button";
+    
+    btn.innerHTML = `
+      <span>${String(i+1).padStart(2,"0")}. ${r}</span>
+      ${isMastered ? '<span class="done-badge">✓ 외운 말씀</span>' : ''}
+    `;
+
+    btn.addEventListener("click", () => {
+      if (onlyMasteredFilter && !isMastered) {
+        alert("현재 '외운 것만 보기' 필터가 켜져 있어 해당 구절을 바로 보려면 필터를 꺼야 합니다.");
+        return;
+      }
+      const active = getActiveIndices();
+      pos = active.indexOf(i);
+      if (pos < 0) pos = 0;
+      showingVerse = $("startSide").value === "verse";
+      closeJumpModal();
+      render();
+    });
+
+    listContainer.appendChild(btn);
+  });
+
+  $("jumpOverlay").classList.add("show");
+}
+
+function closeJumpModal(){ $("jumpOverlay").classList.remove("show"); }
+
+$("jumpOpenBtn").addEventListener("click", openJumpModal);
+$("closeJump").addEventListener("click", closeJumpModal);
+$("jumpOverlay").addEventListener("click", e => { if (e.target === $("jumpOverlay")) closeJumpModal(); });
 
 function openTypeTest(){const idx=currentIndex();$("typeTestRef").textContent=refs[idx];$("typeTestInput").value="";$("typeTestResult").hidden=true;$("typeTestExpected").hidden=true;$("typeTestOverlay").classList.add("show");setTimeout(()=>$("typeTestInput").focus(),80)}
 function closeTypeTest(){$("typeTestOverlay").classList.remove("show")}
@@ -377,22 +418,7 @@ $("shuffle").addEventListener("click",()=>{
 $("startSide").addEventListener("change",()=>{showingVerse=$("startSide").value==="verse";render()});
 $("fontSize").addEventListener("change",e=>{cardText.style.fontSize=e.target.value==="small"?"22px":e.target.value==="large"?"clamp(30px,7vw,42px)":""});
 
-updateJumpSelect();
-
-$("jump").addEventListener("change",e=>{
-  const idx=Number(e.target.value);
-  if(onlyMasteredFilter && !mastered.has(idx)){
-    alert("현재 '외운 것만 보기' 필터가 켜져 있어 해당 구절을 바로 보려면 필터를 꺼야 합니다.");
-    return;
-  }
-  const active = getActiveIndices();
-  pos=active.indexOf(idx);
-  if(pos<0) pos=0;
-  showingVerse=$("startSide").value==="verse";
-  render();
-});
-
-$("export").addEventListener("click",()=>{const data={app:"말씀 한 장",version:7,mastered:[...mastered]};const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="말씀-암기-학습기록.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
+$("export").addEventListener("click",()=>{const data={app:"말씀 한 장",version:9,mastered:[...mastered]};const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="말씀-암기-학습기록.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
 $("importBtn").addEventListener("click",()=>$("importFile").click());
 $("importFile").addEventListener("change",async e=>{const f=e.target.files[0];if(!f)return;try{const data=JSON.parse(await f.text());if(Array.isArray(data.mastered)){mastered=new Set(data.mastered);persist();render();alert("학습 기록을 불러왔어요.")}else{throw Error()}}catch(err){alert("백업 파일을 읽지 못했어요.")}e.target.value=""});
 
@@ -448,15 +474,6 @@ function renderQuiz(){
   $("quizInstructions").textContent=q.askRef?"본문을 읽고 알맞은 성경 장절을 고르세요.":"성경 장절을 보고 알맞은 본문을 고르세요.";
   $("quizQuestion").textContent=q.askRef?q.item.text:q.item.ref;
   $("quizOptions").innerHTML="";
-  q.options.export ? q.options.forEach : q.options.forEach((opt,n)=>{
-    const b=document.createElement("button");
-    b.className="quiz-option";
-    b.textContent=opt.label;
-    b.addEventListener("click",()=>answerQuiz(n));
-    $("quizOptions").appendChild(b)
-  });
-  // 안전한 렌더링을 위해 아래 루프 보정
-  $("quizOptions").innerHTML="";
   q.options.forEach((opt,n)=>{
     const b=document.createElement("button");
     b.className="quiz-option";
@@ -492,8 +509,8 @@ $("quizSkip").addEventListener("click",()=>{if(quizPos>=quizItems.length){closeQ
 $("quizNext").addEventListener("click",()=>{if(quizPos>=quizItems.length){makeQuiz();return}if(!quizAnswered)return;quizPos++;renderQuiz()});
 
 document.addEventListener("keydown",e=>{
-  if(e.key==="Escape"){closeQuiz();closeTypeTest()}
-  if($("quizOverlay").classList.contains("show")||$("typeTestOverlay").classList.contains("show"))return;
+  if(e.key==="Escape"){closeQuiz();closeTypeTest();closeJumpModal()}
+  if($("quizOverlay").classList.contains("show")||$("typeTestOverlay").classList.contains("show")||$("jumpOverlay").classList.contains("show"))return;
   if(e.key==="ArrowLeft")move(-1);
   if(e.key==="ArrowRight")move(1);
   if(e.key===" "){e.preventDefault();flip()}
